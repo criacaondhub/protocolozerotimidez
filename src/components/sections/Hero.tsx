@@ -12,7 +12,7 @@ export function Hero() {
             <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-white/5 blur-[100px] rounded-full -z-10" />
 
             <div className="container mx-auto px-6 h-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-                {/* Left Column */}
+                {/* Left Column - ANIMATED */}
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -82,17 +82,12 @@ export function Hero() {
                 </motion.div>
             </div>
 
-            {/* Right Side Image - Absolute positioned to fill height, larger and top aligned */}
-            <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1.2, delay: 0.2 }}
-                className="absolute top-0 right-0 h-[110%] w-full lg:w-[50%] pointer-events-none hidden lg:flex items-start justify-end overflow-hidden"
-            >
+            {/* Right Side Image - STATIC (No Animation) */}
+            <div className="absolute top-0 right-0 h-full w-full lg:w-[50%] pointer-events-none hidden lg:flex items-start justify-end overflow-hidden">
                 <img
                     src="assets/banner-hero.png"
                     alt="Giovanni Begossi"
-                    className="h-full w-auto object-contain object-top select-none scale-110 translate-y-[-5%] transition-transform duration-700 hover:scale-115"
+                    className="h-full w-auto object-contain object-top select-none"
                     onError={(e) => {
                         e.currentTarget.style.display = 'none';
                     }}
@@ -102,7 +97,7 @@ export function Hero() {
                     className="absolute top-1/2 right-0 w-full h-[80%] blur-[120px] -z-10 rounded-full opacity-10"
                     style={{ backgroundColor: brandColor }}
                 />
-            </motion.div>
+            </div>
 
             <style>{`
         .text-glow {
