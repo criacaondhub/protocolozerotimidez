@@ -7,7 +7,7 @@ export function Hero() {
 
     return (
         <section className="relative min-h-screen flex items-center pt-20 lg:pt-0 pb-12 overflow-hidden bg-black text-white">
-            {/* Background Gradient Effect - Adjusted to brand color */}
+            {/* Background Gradient Effect */}
             <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#F9EFAF]/5 blur-[120px] rounded-full -z-10" />
             <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-white/5 blur-[100px] rounded-full -z-10" />
 
@@ -51,51 +51,55 @@ export function Hero() {
                         </p>
                     </div>
 
-                    <div className="flex flex-col space-y-6">
+                    <div className="flex flex-col space-y-4 max-w-xl">
                         <Button
                             size="lg"
-                            className="bg-emerald-600 hover:bg-emerald-500 text-white font-black py-8 text-xl rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight w-full md:w-fit px-12"
+                            className="bg-emerald-600 hover:bg-emerald-500 text-white font-black py-8 text-xl rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight w-full shadow-emerald-900/20"
                             onClick={() => document.getElementById('preco')?.scrollIntoView({ behavior: 'smooth' })}
                         >
                             QUERO ELIMINAR MINHA TIMIDEZ AGORA
                         </Button>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                            <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-white/70">
-                                <Lock className="w-4 h-4" style={{ color: brandColor }} />
-                                <span>Compra 100% segura</span>
+                        {/* Trust Badges Box */}
+                        <div
+                            className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-3 rounded-2xl border bg-zinc-900/30 backdrop-blur-sm"
+                            style={{ borderColor: `${brandColor}20` }}
+                        >
+                            <div className="flex items-center justify-center gap-1.5 text-[9px] uppercase tracking-widest font-bold text-white/70">
+                                <Lock className="w-3.5 h-3.5" style={{ color: brandColor }} />
+                                <span>Compra segura</span>
                             </div>
-                            <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-white/70">
-                                <Zap className="w-4 h-4" style={{ color: brandColor }} />
+                            <div className="flex items-center justify-center gap-1.5 text-[9px] uppercase tracking-widest font-bold text-white/70 border-y sm:border-y-0 sm:border-x border-zinc-800/50 py-2 sm:py-0">
+                                <Zap className="w-3.5 h-3.5" style={{ color: brandColor }} />
                                 <span>Acesso imediato</span>
                             </div>
-                            <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-white/70">
-                                <ShieldCheck className="w-4 h-4" style={{ color: brandColor }} />
-                                <span>7 dias de garantia</span>
+                            <div className="flex items-center justify-center gap-1.5 text-[9px] uppercase tracking-widest font-bold text-white/70">
+                                <ShieldCheck className="w-3.5 h-3.5" style={{ color: brandColor }} />
+                                <span>7 dias garantia</span>
                             </div>
                         </div>
                     </div>
                 </motion.div>
             </div>
 
-            {/* Right Side Image - Absolute positioned to fill height */}
+            {/* Right Side Image - Absolute positioned to fill height, larger and top aligned */}
             <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.2, delay: 0.2 }}
-                className="absolute bottom-0 right-0 h-full w-full lg:w-[50%] pointer-events-none hidden lg:flex items-end justify-end overflow-hidden"
+                className="absolute top-0 right-0 h-[110%] w-full lg:w-[50%] pointer-events-none hidden lg:flex items-start justify-end overflow-hidden"
             >
                 <img
                     src="assets/banner-hero.png"
                     alt="Giovanni Begossi"
-                    className="h-full w-auto object-contain object-bottom select-none"
+                    className="h-full w-auto object-contain object-top select-none scale-110 translate-y-[-5%] transition-transform duration-700 hover:scale-115"
                     onError={(e) => {
                         e.currentTarget.style.display = 'none';
                     }}
                 />
                 {/* Soft decorative glow behind person */}
                 <div
-                    className="absolute bottom-0 right-0 w-full h-[80%] blur-[120px] -z-10 rounded-full opacity-20"
+                    className="absolute top-1/2 right-0 w-full h-[80%] blur-[120px] -z-10 rounded-full opacity-10"
                     style={{ backgroundColor: brandColor }}
                 />
             </motion.div>
