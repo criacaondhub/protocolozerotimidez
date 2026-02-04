@@ -1,6 +1,6 @@
-import React from "react";
 import { motion, useMotionValue, useMotionTemplate } from "framer-motion";
 import { Briefcase, Presentation, Users, Video, Mic } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const situations = [
     {
@@ -108,6 +108,23 @@ export function Situations() {
                                 <SituationCard {...sit} />
                             </div>
                         ))}
+                    </div>
+                </div>
+
+                {/* Final Call to Action Section */}
+                <div className="mt-24 flex flex-col items-center text-center space-y-10 max-w-4xl mx-auto">
+                    <h2 className="text-[1.5rem] md:text-[1.8rem] font-bold text-white leading-relaxed">
+                        Se você se identificou com pelo menos uma dessas situações, esse protocolo é para você!
+                    </h2>
+
+                    <div className="w-full max-w-sm md:max-w-md">
+                        <Button
+                            size="lg"
+                            className="bg-emerald-600 hover:bg-emerald-500 text-white font-black py-8 text-xl rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight w-full shadow-emerald-900/20"
+                            onClick={() => document.getElementById('preco')?.scrollIntoView({ behavior: 'smooth' })}
+                        >
+                            QUERO SUPERAR MINHA TIMIDEZ
+                        </Button>
                     </div>
                 </div>
             </div>
