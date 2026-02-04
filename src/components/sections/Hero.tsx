@@ -6,12 +6,12 @@ export function Hero() {
     const brandColor = "#F9EFAF";
 
     return (
-        <section className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden bg-black text-white">
+        <section className="relative min-h-screen flex items-center pt-20 lg:pt-0 pb-12 overflow-hidden bg-black text-white">
             {/* Background Gradient Effect - Adjusted to brand color */}
             <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#F9EFAF]/5 blur-[120px] rounded-full -z-10" />
             <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-white/5 blur-[100px] rounded-full -z-10" />
 
-            <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="container mx-auto px-6 h-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
                 {/* Left Column */}
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
@@ -76,31 +76,29 @@ export function Hero() {
                         </div>
                     </div>
                 </motion.div>
-
-                {/* Right Column - Hero Banner */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.2 }}
-                    className="relative hidden lg:block"
-                >
-                    <div className="relative w-full max-w-2xl mx-auto">
-                        <img
-                            src="assets/banner-hero.png"
-                            alt="Giovanni Begossi"
-                            className="w-full h-auto drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
-                            onError={(e) => {
-                                e.currentTarget.style.display = 'none';
-                            }}
-                        />
-                        {/* Soft decorative glow behind person */}
-                        <div
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/3 h-2/3 blur-[120px] -z-10 rounded-full"
-                            style={{ backgroundColor: `${brandColor}1A` }}
-                        />
-                    </div>
-                </motion.div>
             </div>
+
+            {/* Right Side Image - Absolute positioned to fill height */}
+            <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.2, delay: 0.2 }}
+                className="absolute bottom-0 right-0 h-full w-full lg:w-[50%] pointer-events-none hidden lg:flex items-end justify-end overflow-hidden"
+            >
+                <img
+                    src="assets/banner-hero.png"
+                    alt="Giovanni Begossi"
+                    className="h-full w-auto object-contain object-bottom select-none"
+                    onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                    }}
+                />
+                {/* Soft decorative glow behind person */}
+                <div
+                    className="absolute bottom-0 right-0 w-full h-[80%] blur-[120px] -z-10 rounded-full opacity-20"
+                    style={{ backgroundColor: brandColor }}
+                />
+            </motion.div>
 
             <style>{`
         .text-glow {
@@ -108,10 +106,10 @@ export function Hero() {
         }
         @media (min-width: 1024px) {
           h1 {
-            max-width: 26ch; /* Controla para aprox 4 linhas */
+            max-width: 26ch;
           }
           .subtitle-width {
-            max-width: 55ch; /* Controla para aprox 3 linhas */
+            max-width: 55ch;
           }
         }
       `}</style>
