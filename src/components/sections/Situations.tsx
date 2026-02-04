@@ -8,7 +8,7 @@ const situations = [
         icon: <Presentation className="w-7 h-7" />,
         items: [
             { icon: "icone-check.png", text: "Você se preparou por semanas." },
-            { icon: "icone-freeze-face.png", text: <>Mas quando sobe no palco, as mãos suam, a boca seca e você só consegue pensar: <i>"Todo mundo está me julgando"</i></> },
+            { icon: "icone-freeze-face.png", text: <>Mas quando sobe no palco, as mãos suam, a boca seca e você só consegue pensar: <i>"Todos estão me julgando"</i></> },
         ]
     },
     {
@@ -34,7 +34,7 @@ const situations = [
             { icon: "icone-check.png", text: "Você aperta o REC." },
             { icon: "icone-stop.png", text: "Tenta falar. Para. Apaga." },
             { icon: "icone-tedio-face.png", text: "Tenta de novo. Para de novo." },
-            { icon: "icone-weary-face.png", text: <>E desiste porque pensa: <i>"Não sou bom nisso mesmo"</i></> },
+            { icon: "icone-weary-face.png", text: <>E desiste porque pensa: <br /> <i>"Não sou bom nisso mesmo"</i></> },
         ]
     },
     {
@@ -42,7 +42,7 @@ const situations = [
         icon: <Mic className="w-7 h-7" />,
         items: [
             { icon: "icone-fala.png", text: "Você grava, escuta, deleta." },
-            { icon: "icone-repeat.png", text: "Grava de novo, escuta de novo, deleta de novo." },
+            { icon: "icone-repeat.png", text: <>Grava de novo, escuta de novo, <br /> deleta de novo.</> },
             { icon: "icone-calado.png", text: "Até que desista e mande só o texto." },
         ]
     }
@@ -206,8 +206,8 @@ function SituationCard({ title, icon, items }: SituationCardProps) {
 
             <div className="flex flex-col gap-6">
                 {items.map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-6 h-6 mt-1 flex items-center justify-center">
+                    <div key={idx} className="flex items-center gap-4 py-1">
+                        <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center -mt-1">
                             <img src={`assets/${item.icon}`} alt="" className="w-full h-full object-contain" />
                         </div>
                         <div className="text-[1.125rem] leading-[1.5] text-white/80 font-normal">
