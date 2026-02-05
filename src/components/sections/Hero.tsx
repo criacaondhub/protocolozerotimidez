@@ -37,7 +37,7 @@ export function Hero() {
                             style={{ color: brandColor, borderColor: `${brandColor}33` }}
                         >
                             <Check className="w-4 h-4" />
-                            <span>Mais de 100 mil alunos formados</span>
+                            <span>Mais de 70 mil alunos formados</span>
                         </div>
 
                         <h1

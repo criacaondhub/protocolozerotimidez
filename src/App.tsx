@@ -5,6 +5,8 @@ import { Modules } from "./components/sections/Modules"
 import { Pricing } from "./components/sections/Pricing"
 import { DecisionSection } from "./components/sections/DecisionSection"
 import { Expert } from "./components/sections/Expert"
+import { FAQ } from "./components/sections/FAQ"
+import { Footer } from "./components/sections/Footer"
 import { Transformation } from "./components/sections/Transformation"
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
       <Pricing />
       <DecisionSection />
       <Expert />
+      <FAQ />
+      <Footer />
     </main>
   )
 }

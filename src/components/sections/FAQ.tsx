@@ -1,0 +1,100 @@
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
+import { motion } from "framer-motion";
+import CurvedLoop from "@/components/ui/CurvedLoop";
+
+export function FAQ() {
+    const faqs = [
+        {
+            question: "Isso funciona para quem é MUITO tímido?",
+            answer: "Sim. O protocolo foi criado exatamente para quem é muito tímido ou ainda sofre com algum bloqueio e quer destravar 100% da comunicação. Giovanni era extremamente tímido, sofria bullying e não tinha amigos. Se funcionou para ele, funciona para você."
+        },
+        {
+            question: "Quanto tempo leva para ver o resultado?",
+            answer: " Muitos alunos percebem diferença já nos primeiros dias. Mas a transformação real acontece quando você aplica o protocolo completo de modo contínuo, colhendo resultados pelo resto da vida."
+        },
+        {
+            question: "Mas e se eu não quiser falar em público?",
+            answer: "O protocolo funciona para qualquer situação: reuniões pequenas, conversas 1 a 1, vídeos, áudios... você não precisa virar palestrante, más precisa parar de travar."
+        },
+        {
+            question: "E se eu não tiver tempo para fazer o curso?",
+            answer: "As aulas são curtas e diretas (10-15 minutos em média). Você consegue assistir no trajeto para o trabalho, no horário de almoço, ou até mesmo antes de dormir."
+        },
+        {
+            question: "Isso é só teoria ou tem prática?",
+            answer: "É 80% prática. Cada módulo tem exercícios e técnicas para você aplicar imediatamente. Não é um curso para \"refletir sobre timidez\". É um curso para ELIMINAR timidez."
+        },
+        {
+            question: "Funciona para quem já tem mais de 40 anos?",
+            answer: "Sim. Timidez não tem idade. Giovanni já treinou pessoas de 5 a 85 anos. O protocolo funciona porque é baseado em neurociência e comportamento, não em \"ser jovem e descolado\"."
+        },
+        {
+            question: "E se eu não gostar?",
+            answer: "Você tem 7 dias de garantia incondicional a partir da data da compra. Se você achar que não é pra você, é só solicitar reembolso. Sem perguntas, sem burocracia."
+        },
+        {
+            question: "Como receberei o acesso?",
+            answer: "O acesso será enviado imediatamente após a sua compra em seu e-mail e também no seu WhatsApp! Caso não tenha recebido, verifique o seu spam. Se necessário, entre em contato com nosso suporte."
+        },
+        {
+            question: "Qual o contato do suporte?",
+            answer: "Entre em contato através do número (xx) xxxxx-xxxx."
+        },
+        {
+            question: "Por quanto tempo terei acesso?",
+            answer: "Você terá acesso por 1 ano para assistir quantas vezes quiser!"
+        }
+    ];
+
+    return (
+        <section id="faq" className="bg-black text-white py-24 relative overflow-hidden">
+            <div className="container mx-auto px-6 max-w-4xl relative z-10">
+                {/* FAQ Header with vertical gradient */}
+                <div className="text-center mb-5">
+                    <h2 className="text-8xl md:text-9xl font-black tracking-tighter uppercase leading-none bg-gradient-to-b from-[#f9efaf] to-black bg-clip-text text-transparent opacity-80">
+                        FAQ
+                    </h2>
+                </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                >
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqs.map((faq, index) => (
+                            <AccordionItem
+                                key={index}
+                                value={`item-${index}`}
+                                className="border border-zinc-800 bg-zinc-900/30 rounded-2xl px-6 transition-all data-[state=open]:border-[#f9efaf]/30 data-[state=open]:bg-zinc-900/50"
+                            >
+                                <AccordionTrigger className="hover:no-underline py-6 text-lg md:text-xl font-bold tracking-tight text-left">
+                                    {faq.question}
+                                </AccordionTrigger>
+                                <AccordionContent className="text-zinc-400 text-lg leading-relaxed pb-6">
+                                    {faq.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </motion.div>
+            </div>
+
+            {/* Curved Loop Decoration */}
+            <div className="mt-12 w-full text-[#F9EFAF]/80">
+                <CurvedLoop
+                    marqueeText="Zero Timidez ✦ Zero Timidez ✦ Zero Timidez ✦ Zero Timidez ✦ Zero Timidez ✦ "
+                    speed={0.4}
+                    curveAmount={160}
+                    interactive
+                    className="text-4xl md:text-6xl font-black uppercase tracking-tighter"
+                />
+            </div>
+        </section>
+    );
+}
