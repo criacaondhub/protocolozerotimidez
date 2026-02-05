@@ -55,8 +55,8 @@ export function CostSection() {
 
                         <ul className="space-y-6">
                             {careerPoints.map((point, idx) => (
-                                <li key={idx} className="flex items-start gap-4 text-[1.125rem] text-zinc-700 leading-snug">
-                                    <span className="text-zinc-400 mt-1.5">•</span>
+                                <li key={idx} className="flex items-start text-[1.125rem] text-zinc-700 leading-snug">
+                                    <span className="text-zinc-400 font-bold mr-3 shrink-0">•</span>
                                     <span>{point}</span>
                                 </li>
                             ))}
@@ -77,8 +77,8 @@ export function CostSection() {
 
                         <ul className="space-y-6">
                             {relationshipsPoints.map((point, idx) => (
-                                <li key={idx} className="flex items-start gap-4 text-[1.125rem] text-zinc-700 leading-snug">
-                                    <span className="text-zinc-400 mt-1.5">•</span>
+                                <li key={idx} className="flex items-start text-[1.125rem] text-zinc-700 leading-snug">
+                                    <span className="text-zinc-400 font-bold mr-3 shrink-0">•</span>
                                     <span>{point}</span>
                                 </li>
                             ))}
