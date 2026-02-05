@@ -1,6 +1,7 @@
 import { Hero } from "./components/sections/Hero"
 import { Situations } from "./components/sections/Situations"
 import { CostSection } from "./components/sections/CostSection"
+import { Modules } from "./components/sections/Modules"
 import { Transformation } from "./components/sections/Transformation"
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Situations />
       <CostSection />
       <Transformation />
+      <Modules />
     </main>
   )
 }
