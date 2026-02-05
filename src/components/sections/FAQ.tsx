@@ -52,14 +52,15 @@ export function FAQ() {
     ];
 
     return (
-        <section id="faq" className="bg-black text-white py-24 relative overflow-hidden">
+        <section id="faq" className="bg-black text-white pt-24 pb-0 relative overflow-hidden">
+            {/* FAQ Header - Outside restricted container to avoid clipping */}
+            <div className="text-center mb-10 px-6">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[4.5rem] font-black tracking-tighter uppercase leading-none bg-gradient-to-b from-[#f9efaf] to-black bg-clip-text text-transparent opacity-80 whitespace-nowrap">
+                    PERGUNTAS FREQUENTES
+                </h2>
+            </div>
+
             <div className="container mx-auto px-6 max-w-4xl relative z-10">
-                {/* FAQ Header with vertical gradient */}
-                <div className="text-center mb-5">
-                    <h2 className="text-8xl md:text-9xl font-black tracking-tighter uppercase leading-none bg-gradient-to-b from-[#f9efaf] to-black bg-clip-text text-transparent opacity-80">
-                        FAQ
-                    </h2>
-                </div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
