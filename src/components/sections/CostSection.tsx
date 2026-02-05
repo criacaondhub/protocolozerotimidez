@@ -21,7 +21,7 @@ const relationshipsPoints = [
 
 export function CostSection() {
     return (
-        <section className="bg-white text-black py-32 relative overflow-hidden min-h-screen flex flex-col justify-center">
+        <section className="bg-white text-black py-24 relative overflow-hidden min-h-screen flex flex-col justify-center">
             {/* Semi-ellipse Transition Top */}
             <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-30">
                 <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[120%] -left-[10%] h-[80px] fill-black">
