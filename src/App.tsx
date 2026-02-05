@@ -4,6 +4,7 @@ import { CostSection } from "./components/sections/CostSection"
 import { Modules } from "./components/sections/Modules"
 import { Pricing } from "./components/sections/Pricing"
 import { DecisionSection } from "./components/sections/DecisionSection"
+import { Expert } from "./components/sections/Expert"
 import { Transformation } from "./components/sections/Transformation"
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Modules />
       <Pricing />
       <DecisionSection />
+      <Expert />
     </main>
   )
 }
