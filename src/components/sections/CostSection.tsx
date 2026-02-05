@@ -3,7 +3,7 @@ import { TrendingDown, HeartOff } from "lucide-react";
 
 const careerPoints = [
     <>A promoção que foi para o colega que <br /> <span className="font-semibold">"sabe se vender"</span>;</>,
-    <>A ideia que você não apresentou e outro <br /> <span className="font-semibold">outro levou o crédito</span>;</>,
+    <>A ideia que você não apresentou e <br /> <span className="font-semibold">outro levou o crédito</span>;</>,
     <>Oportunidades que passaram porque <br /> <span className="font-semibold">não se posicionou</span>;</>,
     <>O projeto que você <span className="font-semibold">não conseguiu defender</span>;</>,
     <>A reunião em que você ficou <span className="font-semibold">invisível</span>;</>,
@@ -13,9 +13,9 @@ const careerPoints = [
 const relationshipsPoints = [
     <>Conexões que você não fez por medo <br /> <span className="font-semibold">medo de puxar conversa</span>;</>,
     <>Ser <span className="font-semibold">excluído de grupos</span> e deixar de ser <br /> convidado para eventos;</>,
-    <>Amizades que não aconteceram porque você <br /> <span className="font-semibold">não sabia o que dizer</span>.</>,
-    <>Momentos que você evitou por medo <br /> <span className="font-semibold">ser julgado</span>.</>,
-    <>A frustração de voltar para casa pensando <br /> <span className="font-semibold">eu deveria ter falado</span>.</>,
+    <>Amizades que não aconteceram porque <br /> você <span className="font-semibold">não sabia o que dizer</span>;</>,
+    <>Momentos que você evitou por medo <br /> <span className="font-semibold">ser julgado</span>;</>,
+    <>A frustração de voltar para casa pensando <br /> <span className="font-semibold">"eu deveria ter falado"</span>;</>,
     <>A <span className="font-semibold">ansiedade</span> que vem antes de qualquer compromisso social.</>
 ];
 
@@ -44,7 +44,7 @@ export function CostSection() {
                     {/* Career Box */}
                     <motion.div
                         whileHover={{ y: -10 }}
-                        className="bg-white rounded-[2rem] p-10 border border-zinc-200 shadow-[0_10px_40px_rgba(0,0,0,0.03)] flex flex-col h-full"
+                        className="bg-white rounded-[2rem] pl-10 pr-5 py-10 border border-zinc-200 shadow-[0_10px_40px_rgba(0,0,0,0.03)] flex flex-col h-full"
                     >
                         <div className="flex items-center gap-4 mb-8">
                             <div className="p-3 bg-zinc-50 rounded-2xl">
@@ -66,7 +66,7 @@ export function CostSection() {
                     {/* Relationships Box */}
                     <motion.div
                         whileHover={{ y: -10 }}
-                        className="bg-white rounded-[2rem] p-10 border border-zinc-200 shadow-[0_10px_40px_rgba(0,0,0,0.03)] flex flex-col h-full"
+                        className="bg-white rounded-[2rem] pl-10 pr-5 py-10 border border-zinc-200 shadow-[0_10px_40px_rgba(0,0,0,0.03)] flex flex-col h-full"
                     >
                         <div className="flex items-center gap-4 mb-8">
                             <div className="p-3 bg-zinc-50 rounded-2xl">

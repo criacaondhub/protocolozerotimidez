@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Masonry from "@/components/ui/Masonry";
+import ColorBends from "@/components/ui/ColorBends";
 
 const masonryItems = [
     // Recalibrando para uma altura compacta de ~610px
@@ -23,7 +24,24 @@ const masonryItems = [
 export function Transformation() {
     return (
         <section className="bg-black text-white py-24 relative overflow-hidden min-h-screen flex items-center">
-            <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            {/* Animated Background */}
+            <div className="absolute inset-0 z-0 opacity-60">
+                <ColorBends
+                    colors={["#f9efaf"]}
+                    rotation={89}
+                    speed={0.2}
+                    scale={1.7}
+                    frequency={1.6}
+                    warpStrength={0.85}
+                    mouseInfluence={0}
+                    parallax={0}
+                    noise={0}
+                    transparent
+                    autoRotate={0}
+                />
+            </div>
+
+            <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
                 {/* Left Column - Content */}
                 <div className="flex flex-col space-y-10">
                     <h2 className="text-[2.5rem] font-bold leading-tight">

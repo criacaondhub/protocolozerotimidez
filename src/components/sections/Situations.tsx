@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useMotionTemplate } from "framer-motion";
 import { Briefcase, Presentation, Users, Video, Mic } from "lucide-react";
+import ColorBends from "@/components/ui/ColorBends";
 import { Button } from "@/components/ui/button";
 
 const situations = [
@@ -50,9 +51,26 @@ const situations = [
 
 export function Situations() {
     return (
-        <section className="bg-black py-32 relative">
+        <section className="bg-black py-32 relative z-20">
+            {/* Animated Background */}
+            <div className="absolute inset-0 z-0 opacity-25">
+                <ColorBends
+                    colors={["#f9efaf"]}
+                    rotation={89}
+                    speed={0.2}
+                    scale={1.7}
+                    frequency={1.6}
+                    warpStrength={0.85}
+                    mouseInfluence={0}
+                    parallax={0}
+                    noise={0}
+                    transparent
+                    autoRotate={0}
+                />
+            </div>
+
             {/* Circular Text Divider */}
-            <div className="absolute top-0 left-0 w-full flex justify-center -translate-y-1/2 z-[40]">
+            <div className="absolute top-0 left-0 w-full flex justify-center -translate-y-1/2 z-[100]">
                 <div className="relative w-48 h-48 flex items-center justify-center">
                     <motion.div
                         animate={{ rotate: 360 }}
