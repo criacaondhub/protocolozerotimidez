@@ -86,6 +86,13 @@ export function CostSection() {
                     </motion.div>
                 </div>
             </div>
+
+            {/* Semi-ellipse Transition Bottom */}
+            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-30 translate-y-[1px]">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[120%] -left-[10%] h-[80px] fill-black rotate-180">
+                    <path d="M0,0 h1200 v50 Q600,120 0,50 Z"></path>
+                </svg>
+            </div>
         </section>
     );
 }

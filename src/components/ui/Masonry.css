@@ -1,0 +1,19 @@
+.masonry-list {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.masonry-item-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    will-change: transform, opacity, width, height;
+}
+
+.masonry-item-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: inherit;
+}
