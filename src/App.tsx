@@ -3,6 +3,7 @@ import { Situations } from "./components/sections/Situations"
 import { CostSection } from "./components/sections/CostSection"
 import { Modules } from "./components/sections/Modules"
 import { Pricing } from "./components/sections/Pricing"
+import { DecisionSection } from "./components/sections/DecisionSection"
 import { Transformation } from "./components/sections/Transformation"
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Transformation />
       <Modules />
       <Pricing />
+      <DecisionSection />
     </main>
   )
 }

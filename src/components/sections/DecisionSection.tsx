@@ -1,0 +1,136 @@
+import { motion } from "framer-motion";
+import { X, Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Beams from "@/components/ui/Beams";
+
+export function DecisionSection() {
+    const leftPoints = [
+        "Continuar tímido e travado;",
+        "Perder oportunidades diariamente;",
+        <>Ver outras pessoas crescendo<br />enquanto você fica pra trás;</>,
+        <>Viver com o arrependimento de<br />"eu deveria ter falado";</>,
+        "Ficar preso na própria cabeça."
+    ];
+
+    const rightPoints = [
+        "Eliminar os bloqueios que te travam;",
+        "Ter técnicas práticas para qualquer situação;",
+        "Falar com confiança quando precisar;",
+        "Aproveitar oportunidades que aparecem;",
+        "Parar de se arrepender de não ter falado."
+    ];
+
+    return (
+        <section className="bg-black text-white py-24 relative overflow-hidden">
+            {/* Background Animation - Same as Pricing for continuity */}
+            <div className="absolute inset-0 z-0 opacity-50">
+                <Beams
+                    beamWidth={4.6}
+                    beamHeight={25}
+                    beamNumber={24}
+                    lightColor="#f9efaf"
+                    speed={4}
+                    noiseIntensity={0.65}
+                    scale={0.32}
+                    rotation={30}
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+            </div>
+
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-7xl mx-auto">
+
+                    {/* Left Box: Continuar como está */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-red-950/20 border border-red-500/20 rounded-[2.5rem] p-8 md:p-12 backdrop-blur-md flex flex-col h-full"
+                    >
+                        <h2 className="text-2xl md:text-3xl font-bold mb-10 tracking-tight uppercase text-red-500 text-center">
+                            <strong>CONTINUAR COMO ESTÁ:</strong>
+                        </h2>
+
+                        <div className="flex flex-col items-center flex-grow mb-12">
+                            <ul className="space-y-6 w-full max-w-fit">
+                                {leftPoints.map((point, idx) => (
+                                    <li key={idx} className="flex items-start gap-4 text-left">
+                                        <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center shrink-0 mt-0.5">
+                                            <X className="w-4 h-4 text-red-500" strokeWidth={3} />
+                                        </div>
+                                        <span className="text-lg md:text-xl text-zinc-300 leading-tight">
+                                            {point}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div className="pt-8 border-t border-red-500/10 space-y-4 text-center">
+                            <h3 className="text-lg md:text-xl font-medium">
+                                <strong>Investimento:</strong> R$ 0,00 hoje
+                            </h3>
+                            <h3 className="text-lg md:text-xl font-medium">
+                                <strong>Custo real:</strong> Incalculável ao longo dos anos
+                            </h3>
+                        </div>
+                    </motion.div>
+
+                    {/* Right Box: Protocolo Zero Timidez */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="bg-emerald-950/20 border border-emerald-500/30 rounded-[2.5rem] p-8 md:p-12 backdrop-blur-md flex flex-col h-full ring-1 ring-emerald-500/20"
+                    >
+                        <h2 className="text-2xl md:text-3xl font-bold mb-10 tracking-tight uppercase text-emerald-400 text-center">
+                            <strong>PROTOCOLO ZERO TIMIDEZ:</strong>
+                        </h2>
+
+                        <div className="flex flex-col items-center flex-grow mb-12">
+                            <ul className="space-y-6 w-full max-w-fit">
+                                {rightPoints.map((point, idx) => (
+                                    <li key={idx} className="flex items-start gap-4 text-left">
+                                        <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-0.5">
+                                            <Check className="w-4 h-4 text-emerald-500" strokeWidth={3} />
+                                        </div>
+                                        <span className="text-lg md:text-xl text-emerald-50/90 leading-tight">
+                                            {point}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div className="pt-8 border-t border-emerald-500/20 space-y-4 text-center">
+                            <h3 className="text-lg md:text-xl font-medium">
+                                <strong>Investimento:</strong> R$ 97,00
+                            </h3>
+                            <h3 className="text-lg md:text-xl font-medium">
+                                <strong>Retorno:</strong> Todas as oportunidades que você<br />vai parar de perder
+                            </h3>
+                        </div>
+                    </motion.div>
+                </div>
+
+                {/* Main CTA below the boxes */}
+                <div className="flex justify-center mt-16">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="w-full max-w-2xl"
+                    >
+                        <Button
+                            size="lg"
+                            className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-10 text-xl md:text-2xl rounded-2xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_20px_40px_rgba(16,185,129,0.2)] border-b-8 border-emerald-800 active:border-b-0 uppercase tracking-tighter"
+                        >
+                            ESSE PROTOCOLO É PRA MIM!
+                        </Button>
+                    </motion.div>
+                </div>
+            </div>
+        </section>
+    );
+}
