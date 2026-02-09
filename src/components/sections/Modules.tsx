@@ -173,7 +173,7 @@ function ModuleCard({ module, delay }: { module: any, delay: number }) {
             transition={{ delay }}
             className="bg-white border border-zinc-100 shadow-xl shadow-zinc-200/40 rounded-[2rem] p-6 md:p-8 flex flex-col hover:border-[#c9a24b]/40 transition-all hover:shadow-2xl hover:shadow-[#c9a24b]/5 group"
         >
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex flex-col items-center lg:items-start gap-3 mb-6 text-center lg:text-left">
                 <div className="flex flex-col">
                     <span className="text-[10px] font-bold text-[#c9a24b] uppercase tracking-[0.2em] mb-1">Módulo {module.number}</span>
                     <h3 className="text-xl font-bold tracking-tight uppercase leading-tight group-hover:text-[#c9a24b] transition-colors">
@@ -183,15 +183,15 @@ function ModuleCard({ module, delay }: { module: any, delay: number }) {
             </div>
 
             {module.description && (
-                <p className="text-sm font-bold text-[#c9a24b] mb-6 leading-relaxed italic bg-[#f9efaf]/20 p-4 rounded-2xl border-l-4 border-[#c9a24b]">
+                <p className="text-sm font-bold text-[#c9a24b] mb-6 leading-relaxed italic bg-[#f9efaf]/20 p-4 rounded-2xl lg:border-l-4 border-[#c9a24b]">
                     {module.description}
                 </p>
             )}
 
-            <ul className="space-y-4">
+            <ul className="space-y-4 flex flex-col items-center lg:items-start text-center lg:text-left">
                 {module.lessons.map((lesson: string, lIdx: number) => (
-                    <li key={lIdx} className="flex items-start gap-3 group/item">
-                        <PlayCircle className="w-4 h-4 text-[#c9a24b] mt-1 shrink-0 opacity-30 group-hover/item:opacity-100 transition-opacity" />
+                    <li key={lIdx} className="flex flex-col lg:flex-row items-center lg:items-start gap-2 lg:gap-3 group/item">
+                        <PlayCircle className="w-4 h-4 text-[#c9a24b] shrink-0 opacity-40 group-hover/item:opacity-100 transition-opacity" />
                         <span className="text-[0.95rem] text-zinc-700 leading-[1.4] font-medium">
                             {lesson}
                         </span>

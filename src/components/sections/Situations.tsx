@@ -20,7 +20,7 @@ const situations = [
         ]
     },
     {
-        title: "Em uma reunião de trabalho:",
+        title: "NA REUNIÃO DO TRABALHO:",
         icon: <Briefcase className="w-7 h-7" />,
         items: [
             { icon: "icone-check.png", text: "Você sabe a resposta." },
@@ -35,7 +35,7 @@ const situations = [
             { icon: "icone-check.png", text: "Você aperta o REC." },
             { icon: "icone-stop.png", text: "Tenta falar. Para. Apaga." },
             { icon: "icone-tedio-face.png", text: "Tenta de novo. Para de novo." },
-            { icon: "icone-weary-face.png", text: <>E desiste porque pensa: <br /> <i>"Não sou bom nisso mesmo"</i></> },
+            { icon: "icone-weary-face.png", text: <>E desiste porque pensa: <br className="hidden lg:block" /> <i>"Não sou bom nisso mesmo"</i></> },
         ]
     },
     {
@@ -43,7 +43,7 @@ const situations = [
         icon: <Mic className="w-7 h-7" />,
         items: [
             { icon: "icone-fala.png", text: "Você grava, escuta, deleta." },
-            { icon: "icone-repeat.png", text: <>Grava de novo, escuta de novo, <br /> deleta de novo.</> },
+            { icon: "icone-repeat.png", text: <>Grava de novo, escuta de novo, <br className="hidden lg:block" /> deleta de novo.</> },
             { icon: "icone-calado.png", text: "Até que desista e mande só o texto." },
         ]
     }
@@ -52,8 +52,8 @@ const situations = [
 export function Situations() {
     return (
         <section className="bg-black py-32 relative z-20">
-            {/* Animated Background */}
-            <div className="absolute inset-0 z-0 opacity-25">
+            {/* Animated Background - Hidden on mobile */}
+            <div className="absolute inset-0 z-0 opacity-25 hidden lg:block">
                 <ColorBends
                     colors={["#f9efaf"]}
                     rotation={89}
@@ -70,8 +70,8 @@ export function Situations() {
             </div>
 
             {/* Circular Text Divider */}
-            <div className="absolute top-0 left-0 w-full flex justify-center -translate-y-1/2 z-[100]">
-                <div className="relative w-48 h-48 flex items-center justify-center">
+            <div className="absolute top-0 left-0 w-full flex justify-center z-[100] px-4 mt-0 lg:-translate-y-1/2">
+                <div className="relative w-32 h-32 md:w-48 md:h-48 flex items-center justify-center">
                     <motion.div
                         animate={{ rotate: 360 }}
                         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
@@ -97,14 +97,14 @@ export function Situations() {
                         <img
                             src="assets/icone-zt.png"
                             alt="ZT"
-                            className="h-[40px] w-auto"
+                            className="h-8 md:h-[40px] w-auto"
                         />
                     </div>
                 </div>
             </div>
 
             <div className="container mx-auto px-4 sm:px-6 relative z-10">
-                <h2 className="text-3xl md:text-[2.5rem] font-bold text-center text-white mb-12 md:mb-20 leading-tight">
+                <h2 className="text-[26px] md:text-[2.5rem] font-bold text-center text-white mb-12 md:mb-20 leading-tight">
                     Você reconhece alguma dessas situações?
                 </h2>
 
@@ -138,7 +138,7 @@ export function Situations() {
                     <div className="w-full max-w-sm md:max-w-md">
                         <Button
                             size="lg"
-                            className="bg-emerald-600 hover:bg-emerald-500 text-white font-black py-8 text-xl rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight w-full shadow-emerald-900/20"
+                            className="bg-emerald-600 hover:bg-emerald-500 text-white font-black py-6 text-[16px] rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight w-full shadow-emerald-900/20"
                             onClick={() => document.getElementById('preco')?.scrollIntoView({ behavior: 'smooth' })}
                         >
                             QUERO SUPERAR MINHA TIMIDEZ
@@ -204,7 +204,7 @@ function SituationCard({ title, icon, items }: SituationCardProps) {
                 <div className="shrink-0 scale-75 md:scale-90">
                     {icon}
                 </div>
-                <h3 className="text-[1.05rem] md:text-[1.3rem] font-black leading-tight first-letter:uppercase uppercase tracking-tight">
+                <h3 className="text-[16px] md:text-[1.3rem] font-black leading-tight first-letter:uppercase uppercase tracking-tight text-center">
                     {title}
                 </h3>
             </div>
@@ -225,13 +225,13 @@ function SituationCard({ title, icon, items }: SituationCardProps) {
                     }}
                 />
 
-                <div className="flex flex-col gap-6 relative z-10">
+                <div className="flex flex-col gap-6 relative z-10 items-center lg:items-start text-center lg:text-left">
                     {items.map((item, idx) => (
-                        <div key={idx} className="flex items-center gap-4 py-1">
-                            <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center -mt-1">
+                        <div key={idx} className="flex flex-col lg:flex-row items-center lg:items-start gap-3 lg:gap-4 py-1">
+                            <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
                                 <img src={`assets/${item.icon}`} alt="" className="w-full h-full object-contain" />
                             </div>
-                            <div className="text-[1.1rem] leading-[1.5] text-white/90 font-medium">
+                            <div className="text-[16px] leading-[1.5] text-white/90 font-medium text-center lg:text-left">
                                 {item.text}
                             </div>
                         </div>

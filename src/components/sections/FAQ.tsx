@@ -54,8 +54,8 @@ export function FAQ() {
         <section id="faq" className="bg-black text-white pt-24 pb-0 relative overflow-hidden">
             {/* FAQ Header - Outside restricted container to avoid clipping */}
             <div className="text-center mb-10 px-4 sm:px-6">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.5rem] font-black tracking-tighter uppercase leading-none bg-gradient-to-b from-[#f9efaf] to-black bg-clip-text text-transparent opacity-80 break-words">
-                    PERGUNTAS FREQUENTES
+                <h2 className="text-[32px] sm:text-4xl md:text-5xl lg:text-[4.5rem] font-black tracking-tighter uppercase leading-tight text-[#f9efaf] break-words">
+                    PERGUNTAS <br className="lg:hidden" /> FREQUENTES
                 </h2>
             </div>
 
@@ -73,10 +73,10 @@ export function FAQ() {
                                 value={`item-${index}`}
                                 className="border border-zinc-800 bg-zinc-900/30 rounded-2xl px-6 transition-all data-[state=open]:border-[#f9efaf]/30 data-[state=open]:bg-zinc-900/50"
                             >
-                                <AccordionTrigger className="hover:no-underline py-6 text-lg md:text-xl font-bold tracking-tight text-left">
+                                <AccordionTrigger className="hover:no-underline py-6 text-[16px] md:text-xl font-bold tracking-tight text-center lg:text-left justify-center lg:justify-between">
                                     {faq.question}
                                 </AccordionTrigger>
-                                <AccordionContent className="text-zinc-400 text-lg leading-relaxed pb-6">
+                                <AccordionContent className="text-zinc-400 text-[16px] leading-relaxed pb-6 text-center lg:text-left">
                                     {faq.answer}
                                 </AccordionContent>
                             </AccordionItem>

@@ -6,8 +6,8 @@ import Beams from "@/components/ui/Beams";
 export function Pricing() {
     return (
         <section id="preco" className="bg-black text-white py-24 relative overflow-hidden min-h-screen flex items-center">
-            {/* New Animated Background: Beams */}
-            <div className="absolute inset-0 z-0 opacity-50">
+            {/* New Animated Background: Beams - Hidden on mobile */}
+            <div className="absolute inset-0 z-0 opacity-50 hidden lg:block">
                 <Beams
                     beamWidth={4.6}
                     beamHeight={25}
@@ -26,7 +26,7 @@ export function Pricing() {
                 <div className="max-w-2xl mx-auto">
                     {/* Offer Label */}
                     <div className="flex justify-center mb-10">
-                        <span className="bg-[#f9efaf]/10 text-[#f9efaf] border border-[#f9efaf]/20 px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest">
+                        <span className="bg-[#f9efaf]/10 text-[#f9efaf] border border-[#f9efaf]/20 px-6 py-2 rounded-full text-[13px] font-bold uppercase tracking-tighter lg:tracking-widest">
                             Oferta Especial por Tempo Limitado
                         </span>
                     </div>
@@ -38,8 +38,8 @@ export function Pricing() {
                         viewport={{ once: true }}
                         className="bg-zinc-900/60 border border-zinc-800 rounded-[2.5rem] p-6 md:p-14 text-center backdrop-blur-md shadow-2xl relative"
                     >
-                        <h2 className="text-2xl md:text-[1.8rem] font-bold mb-8 uppercase tracking-tight leading-tight">
-                            Faça sua inscrição com <br />
+                        <h2 className="text-[20px] md:text-[1.8rem] font-bold mb-8 uppercase tracking-tight leading-tight">
+                            Faça sua inscrição com <br className="lg:hidden" />
                             <span className="text-[#f9efaf]">R$ 200,00 de desconto</span>
                         </h2>
 
@@ -63,16 +63,16 @@ export function Pricing() {
 
                         {/* Cash Price */}
                         <div className="mb-10">
-                            <span className="text-zinc-400 text-xl italic font-medium">ou à vista por apenas R$ 97,00</span>
+                            <span className="text-zinc-400 text-[16px] italic font-medium">ou à vista por apenas R$ 97,00</span>
                         </div>
 
                         {/* CTA Button */}
                         <div className="space-y-8">
                             <Button
                                 size="lg"
-                                className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-10 text-xl md:text-2xl rounded-2xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_20px_40px_rgba(16,185,129,0.2)] border-b-8 border-emerald-800 active:border-b-0 uppercase tracking-tighter"
+                                className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-8 md:py-10 text-[16px] md:text-2xl rounded-2xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_20px_40px_rgba(16,185,129,0.2)] border-b-8 border-emerald-800 active:border-b-0 uppercase tracking-tighter"
                             >
-                                QUERO ACABAR COM A TIMIDEZ AGORA
+                                QUERO ACABAR COM <br className="lg:hidden" /> A TIMIDEZ AGORA
                             </Button>
 
                             {/* Payment Icons */}

@@ -4,8 +4,8 @@ import ColorBends from "@/components/ui/ColorBends";
 export function Transformation() {
     return (
         <section className="bg-black text-white py-24 relative overflow-hidden min-h-screen flex items-center">
-            {/* Animated Background */}
-            <div className="absolute inset-0 z-0 opacity-60">
+            {/* Animated Background - Hidden on mobile */}
+            <div className="absolute inset-0 z-0 opacity-60 hidden lg:block">
                 <ColorBends
                     colors={["#f9efaf"]}
                     rotation={89}
@@ -22,42 +22,48 @@ export function Transformation() {
             </div>
 
             <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
-                {/* Left Column - Content */}
-                <div className="flex flex-col space-y-10">
-                    <h2 className="text-3xl md:text-[2.5rem] font-bold leading-tight">
-                        Mas tem uma boa notícia: <br />
+                {/* Mobile/Desktop Content Wrapper */}
+                <div className="flex flex-col space-y-10 items-center lg:items-start text-center lg:text-left">
+                    <h2 className="text-3xl md:text-[2.5rem] font-bold leading-tight max-w-2xl">
+                        Mas tem uma boa notícia: <br className="hidden md:block" />
                         <span style={{ color: '#F9EFAF' }}>Timidez não é algo permanente, eu sou a prova viva disso!</span>
                     </h2>
 
-                    <div className="space-y-6 text-lg text-white/70 leading-relaxed max-w-xl">
+                    {/* Image - Placed between title and text on mobile */}
+                    <div className="flex lg:hidden justify-center items-center w-full">
+                        <img
+                            src="assets/giovanni-antes.png"
+                            alt="Giovanni Antes"
+                            className="w-auto h-[350px] object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
+                        />
+                    </div>
+
+                    <div className="space-y-6 text-lg text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Você não nasceu tímido, você <strong>aprendeu</strong> a ser tímido. E o mesmo cérebro que criou essas travas, é o cérebro que pode ser treinado para eliminá-las.
                         </p>
                         <p>
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                            Eu era o nerd que não conseguia olhar nos olhos de ninguém. Hoje, eu ensino gigantes. O que mudou? Eu entendi que falar bem não é dom, é um <strong>protocolo</strong>.
                         </p>
                     </div>
 
-                    <div className="pt-4">
+                    <div className="pt-4 w-full flex justify-center lg:justify-start">
                         <Button
                             size="lg"
-                            className="bg-emerald-600 hover:bg-emerald-500 text-white font-black py-8 px-10 text-xl rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight shadow-emerald-900/20"
+                            className="bg-emerald-600 hover:bg-emerald-500 text-white font-black py-6 px-8 text-[16px] md:text-xl rounded-xl transition-all active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight shadow-emerald-900/20 w-full md:w-auto"
                             onClick={() => document.getElementById('preco')?.scrollIntoView({ behavior: 'smooth' })}
                         >
-                            TAMBÉM QUERO VIVER ESSA TRANSFORMAÇÃO
+                            QUERO ESSA TRANSFORMAÇÃO
                         </Button>
                     </div>
                 </div>
 
-                {/* Right Column - Giovanni Antes Image */}
-                <div className="flex justify-center lg:justify-end items-center h-full">
+                {/* Right Column - Giovanni Antes Image - DESKTOP ONLY */}
+                <div className="hidden lg:flex justify-center lg:justify-end items-center h-full">
                     <img
                         src="assets/giovanni-antes.png"
                         alt="Giovanni Antes"
-                        className="w-auto h-[400px] md:h-[713px] object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
+                        className="w-auto h-[713px] object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
                     />
                 </div>
             </div>

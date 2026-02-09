@@ -19,13 +19,13 @@ function App() {
       <Transformation />
       <Modules />
       <Pricing />
-      <div className="w-full text-[#F9EFAF]/80 bg-black py-2">
+      <div className="w-full text-[#F9EFAF] bg-black py-4 md:py-2 flex items-center h-[80px] md:h-auto">
         <CurvedLoop
           marqueeText="Zero Timidez ✦ Zero Timidez ✦ Zero Timidez ✦ Zero Timidez ✦ Zero Timidez ✦ "
           speed={0.4}
           curveAmount={0}
           interactive
-          className="text-4xl md:text-6xl font-black uppercase tracking-tighter"
+          className="text-[80px] md:text-6xl font-black uppercase tracking-tighter"
         />
       </div>
       <DecisionSection />
