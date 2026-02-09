@@ -38,6 +38,12 @@ export function DecisionSection() {
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight">
+                        Agora você tem <span className="text-[#f9efaf]">2 opções</span>
+                    </h2>
+                </div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch max-w-7xl mx-auto">
 
                     {/* Left Box: Continuar como está */}

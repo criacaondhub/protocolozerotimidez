@@ -5,7 +5,6 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
-import CurvedLoop from "@/components/ui/CurvedLoop";
 
 export function FAQ() {
     const faqs = [
@@ -86,16 +85,6 @@ export function FAQ() {
                 </motion.div>
             </div>
 
-            {/* Curved Loop Decoration */}
-            <div className="mt-12 w-full text-[#F9EFAF]/80">
-                <CurvedLoop
-                    marqueeText="Zero Timidez ✦ Zero Timidez ✦ Zero Timidez ✦ Zero Timidez ✦ Zero Timidez ✦ "
-                    speed={0.4}
-                    curveAmount={160}
-                    interactive
-                    className="text-4xl md:text-6xl font-black uppercase tracking-tighter"
-                />
-            </div>
         </section>
     );
 }
