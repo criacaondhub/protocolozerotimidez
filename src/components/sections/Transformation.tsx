@@ -21,10 +21,10 @@ export function Transformation() {
                 />
             </div>
 
-            <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+            <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
                 {/* Left Column - Content */}
                 <div className="flex flex-col space-y-10">
-                    <h2 className="text-[2.5rem] font-bold leading-tight">
+                    <h2 className="text-3xl md:text-[2.5rem] font-bold leading-tight">
                         Mas tem uma boa notícia: <br />
                         <span style={{ color: '#F9EFAF' }}>Timidez não é algo permanente, eu sou a prova viva disso!</span>
                     </h2>
@@ -57,8 +57,7 @@ export function Transformation() {
                     <img
                         src="assets/giovanni-antes.png"
                         alt="Giovanni Antes"
-                        className="w-auto object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
-                        style={{ height: '713px' }}
+                        className="w-auto h-[400px] md:h-[713px] object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
                     />
                 </div>
             </div>

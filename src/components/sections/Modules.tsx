@@ -107,13 +107,13 @@ export function Modules() {
                 </svg>
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 pt-16">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-10 md:pt-16">
                 <header className="mb-24 text-center">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-[2.25rem] md:text-[2.75rem] font-bold leading-tight mb-6 max-w-3xl mx-auto"
+                        className="text-3xl md:text-[2.75rem] font-bold leading-tight mb-6 max-w-3xl mx-auto"
                     >
                         Veja tudo que você vai aprender <br />
                         neste <span className="text-[#c9a24b]">treinamento exclusivo!</span>
@@ -171,7 +171,7 @@ function ModuleCard({ module, delay }: { module: any, delay: number }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay }}
-            className="bg-white border border-zinc-100 shadow-xl shadow-zinc-200/40 rounded-[2rem] p-8 flex flex-col hover:border-[#c9a24b]/40 transition-all hover:shadow-2xl hover:shadow-[#c9a24b]/5 group"
+            className="bg-white border border-zinc-100 shadow-xl shadow-zinc-200/40 rounded-[2rem] p-6 md:p-8 flex flex-col hover:border-[#c9a24b]/40 transition-all hover:shadow-2xl hover:shadow-[#c9a24b]/5 group"
         >
             <div className="flex items-center gap-3 mb-6">
                 <div className="flex flex-col">

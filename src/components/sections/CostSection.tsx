@@ -29,13 +29,13 @@ export function CostSection() {
                 </svg>
             </div>
 
-            <div className="container mx-auto px-6 relative z-20">
-                <header className="text-center mb-20 mt-12">
-                    <h2 className="text-[2.5rem] font-bold text-black mb-6 leading-tight max-w-4xl mx-auto">
+            <div className="container mx-auto px-4 sm:px-6 relative z-20">
+                <header className="text-center mb-16 mt-12">
+                    <h2 className="text-3xl md:text-[2.5rem] font-bold text-black mb-6 leading-tight max-w-4xl mx-auto">
                         A timidez custa (muito) caro: <br />
                         <span style={{ color: '#c9a24b' }}>Custa seu dinheiro e sua felicidade.</span>
                     </h2>
-                    <p className="text-[1.5rem] md:text-[1.8rem] font-medium text-black/80 max-w-3xl mx-auto">
+                    <p className="text-xl md:text-[1.8rem] font-medium text-black/80 max-w-3xl mx-auto">
                         E não é só na vida profissional, na pessoal também!
                     </p>
                 </header>
@@ -44,7 +44,7 @@ export function CostSection() {
                     {/* Career Box */}
                     <motion.div
                         whileHover={{ y: -10 }}
-                        className="bg-white rounded-[2rem] pl-10 pr-5 py-10 border border-zinc-200 shadow-[0_10px_40px_rgba(0,0,0,0.03)] flex flex-col h-full"
+                        className="bg-white rounded-[2rem] px-6 py-8 md:pl-10 md:pr-5 md:py-10 border border-zinc-200 shadow-[0_10px_40px_rgba(0,0,0,0.03)] flex flex-col h-full"
                     >
                         <div className="flex items-center gap-4 mb-8">
                             <div className="p-3 bg-zinc-50 rounded-2xl">
@@ -55,7 +55,7 @@ export function CostSection() {
 
                         <ul className="space-y-6">
                             {careerPoints.map((point, idx) => (
-                                <li key={idx} className="flex items-start text-[1.25rem] text-zinc-700 leading-snug">
+                                <li key={idx} className="flex items-start text-lg md:text-[1.25rem] text-zinc-700 leading-snug">
                                     <span className="text-zinc-400 font-bold mr-3 shrink-0">•</span>
                                     <span>{point}</span>
                                 </li>
@@ -66,7 +66,7 @@ export function CostSection() {
                     {/* Relationships Box */}
                     <motion.div
                         whileHover={{ y: -10 }}
-                        className="bg-white rounded-[2rem] pl-10 pr-5 py-10 border border-zinc-200 shadow-[0_10px_40px_rgba(0,0,0,0.03)] flex flex-col h-full"
+                        className="bg-white rounded-[2rem] px-6 py-8 md:pl-10 md:pr-5 md:py-10 border border-zinc-200 shadow-[0_10px_40px_rgba(0,0,0,0.03)] flex flex-col h-full"
                     >
                         <div className="flex items-center gap-4 mb-8">
                             <div className="p-3 bg-zinc-50 rounded-2xl">
@@ -77,7 +77,7 @@ export function CostSection() {
 
                         <ul className="space-y-6">
                             {relationshipsPoints.map((point, idx) => (
-                                <li key={idx} className="flex items-start text-[1.25rem] text-zinc-700 leading-snug">
+                                <li key={idx} className="flex items-start text-lg md:text-[1.25rem] text-zinc-700 leading-snug">
                                     <span className="text-zinc-400 font-bold mr-3 shrink-0">•</span>
                                     <span>{point}</span>
                                 </li>

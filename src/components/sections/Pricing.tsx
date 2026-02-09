@@ -22,7 +22,7 @@ export function Pricing() {
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
             </div>
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10">
                 <div className="max-w-2xl mx-auto">
                     {/* Offer Label */}
                     <div className="flex justify-center mb-10">
@@ -36,7 +36,7 @@ export function Pricing() {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="bg-zinc-900/60 border border-zinc-800 rounded-[2.5rem] p-10 md:p-14 text-center backdrop-blur-md shadow-2xl relative"
+                        className="bg-zinc-900/60 border border-zinc-800 rounded-[2.5rem] p-6 md:p-14 text-center backdrop-blur-md shadow-2xl relative"
                     >
                         <h2 className="text-2xl md:text-[1.8rem] font-bold mb-8 uppercase tracking-tight leading-tight">
                             Faça sua inscrição com <br />
@@ -56,9 +56,9 @@ export function Pricing() {
                         </div>
 
                         <div className="flex items-end justify-center gap-1 mb-6">
-                            <span className="text-5xl md:text-6xl font-bold text-[#f9efaf] pb-5">R$</span>
-                            <span className="text-[10rem] md:text-[13rem] font-bold text-[#f9efaf] leading-[0.85] tracking-tighter">10</span>
-                            <span className="text-5xl md:text-6xl font-bold text-[#f9efaf] pb-5">,18</span>
+                            <span className="text-3xl md:text-6xl font-bold text-[#f9efaf] pb-3 md:pb-5">R$</span>
+                            <span className="text-[7rem] md:text-[13rem] font-bold text-[#f9efaf] leading-[0.85] tracking-tighter">10</span>
+                            <span className="text-3xl md:text-6xl font-bold text-[#f9efaf] pb-3 md:pb-5">,18</span>
                         </div>
 
                         {/* Cash Price */}

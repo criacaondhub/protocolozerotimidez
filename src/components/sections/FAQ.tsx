@@ -53,13 +53,13 @@ export function FAQ() {
     return (
         <section id="faq" className="bg-black text-white pt-24 pb-0 relative overflow-hidden">
             {/* FAQ Header - Outside restricted container to avoid clipping */}
-            <div className="text-center mb-10 px-6">
-                <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[4.5rem] font-black tracking-tighter uppercase leading-none bg-gradient-to-b from-[#f9efaf] to-black bg-clip-text text-transparent opacity-80 whitespace-nowrap">
+            <div className="text-center mb-10 px-4 sm:px-6">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4.5rem] font-black tracking-tighter uppercase leading-none bg-gradient-to-b from-[#f9efaf] to-black bg-clip-text text-transparent opacity-80 break-words">
                     PERGUNTAS FREQUENTES
                 </h2>
             </div>
 
-            <div className="container mx-auto px-6 max-w-4xl relative z-10">
+            <div className="container mx-auto px-4 sm:px-6 max-w-4xl relative z-10">
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

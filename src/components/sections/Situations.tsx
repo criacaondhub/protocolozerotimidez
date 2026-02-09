@@ -103,8 +103,8 @@ export function Situations() {
                 </div>
             </div>
 
-            <div className="container mx-auto px-6 relative z-10">
-                <h2 className="text-[2.5rem] font-bold text-center text-white mb-20 leading-tight">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10">
+                <h2 className="text-3xl md:text-[2.5rem] font-bold text-center text-white mb-12 md:mb-20 leading-tight">
                     Você reconhece alguma dessas situações?
                 </h2>
 
@@ -200,17 +200,17 @@ function SituationCard({ title, icon, items }: SituationCardProps) {
             className="glass-card rounded-[2.5rem] flex flex-col group h-full overflow-hidden border border-[#ffdd80]/20"
         >
             {/* Header Section */}
-            <div className="bg-[#f9efaf] px-6 py-5 flex items-center justify-center gap-3 text-black text-center relative z-10">
-                <div className="shrink-0 scale-90">
+            <div className="bg-[#f9efaf] px-4 py-4 md:px-6 md:py-5 flex items-center justify-center gap-3 text-black text-center relative z-10">
+                <div className="shrink-0 scale-75 md:scale-90">
                     {icon}
                 </div>
-                <h3 className="text-[1.2rem] md:text-[1.3rem] font-black leading-tight first-letter:uppercase uppercase tracking-tight">
+                <h3 className="text-[1.05rem] md:text-[1.3rem] font-black leading-tight first-letter:uppercase uppercase tracking-tight">
                     {title}
                 </h3>
             </div>
 
             {/* Content Area */}
-            <div className="p-8 md:p-10 flex flex-col flex-grow relative">
+            <div className="p-6 md:p-10 flex flex-col flex-grow relative">
                 {/* Spotlight effect overlay */}
                 <motion.div
                     className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"

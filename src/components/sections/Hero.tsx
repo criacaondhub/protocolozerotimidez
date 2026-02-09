@@ -11,7 +11,7 @@ export function Hero() {
             <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#F9EFAF]/5 blur-[120px] rounded-full -z-10" />
             <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-white/5 blur-[100px] rounded-full -z-10" />
 
-            <div className="container mx-auto px-6 h-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div className="container mx-auto px-4 sm:px-6 h-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
                 {/* Left Column - ANIMATED */}
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
@@ -20,7 +20,7 @@ export function Hero() {
                     className="flex flex-col space-y-8"
                 >
                     {/* Logo */}
-                    <div className="w-56">
+                    <div className="w-40 sm:w-56">
                         <img
                             src="assets/logo-zerotimidez.png"
                             alt="Logo Protocolo Zero Timidez"
@@ -41,7 +41,7 @@ export function Hero() {
                         </div>
 
                         <h1
-                            className="text-4xl md:text-5xl lg:text-[3.5em] font-black leading-[1.1] tracking-tighter text-white"
+                            className="text-3xl md:text-5xl lg:text-[3.5em] font-black leading-[1.1] tracking-tighter text-white"
                         >
                             ELIMINE DE UMA VEZ POR TODAS A <span style={{ color: brandColor }} className="text-glow">TIMIDEZ, O MEDO E O NERVOSISMO</span> QUE TE TRAVAM NA HORA DE FALAR
                         </h1>
@@ -73,7 +73,7 @@ export function Hero() {
                                 <Zap className="w-3.5 h-3.5" style={{ color: brandColor }} />
                                 <span>Acesso imediato</span>
                             </div>
-                            <div className="flex items-center justify-center gap-1.5 text-[9px] uppercase tracking-widest font-bold text-white/70">
+                            <div className="flex items-center justify-center gap-1.5 text-[8px] sm:text-[9px] uppercase tracking-widest font-bold text-white/70">
                                 <ShieldCheck className="w-3.5 h-3.5" style={{ color: brandColor }} />
                                 <span>7 dias garantia</span>
                             </div>

@@ -37,8 +37,8 @@ export function DecisionSection() {
                 <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
             </div>
 
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center mb-16">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10">
+                <div className="text-center mb-10">
                     <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase leading-tight">
                         Agora você tem <span className="text-[#f9efaf]">2 opções</span>
                     </h2>
@@ -51,7 +51,7 @@ export function DecisionSection() {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="bg-red-950/20 border border-red-500/20 rounded-[2.5rem] p-8 md:p-12 backdrop-blur-md flex flex-col h-full"
+                        className="bg-red-950/20 border border-red-500/20 rounded-[2.5rem] p-6 md:p-12 backdrop-blur-md flex flex-col h-full"
                     >
                         <h2 className="text-2xl md:text-3xl font-bold mb-10 tracking-tight uppercase text-red-500 text-center">
                             <strong>CONTINUAR COMO ESTÁ:</strong>
@@ -87,7 +87,7 @@ export function DecisionSection() {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="bg-emerald-950/20 border border-emerald-500/30 rounded-[2.5rem] p-8 md:p-12 backdrop-blur-md flex flex-col h-full ring-1 ring-emerald-500/20"
+                        className="bg-emerald-950/20 border border-emerald-500/30 rounded-[2.5rem] p-6 md:p-12 backdrop-blur-md flex flex-col h-full ring-1 ring-emerald-500/20"
                     >
                         <h2 className="text-2xl md:text-3xl font-bold mb-10 tracking-tight uppercase text-emerald-400 text-center">
                             <strong>PROTOCOLO ZERO TIMIDEZ:</strong>

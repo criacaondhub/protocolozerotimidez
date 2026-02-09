@@ -10,7 +10,7 @@ export function Expert() {
                 </svg>
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 pt-16">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
 
                     {/* Content Left */}
@@ -20,14 +20,14 @@ export function Expert() {
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
-                        <h2 className="text-2xl md:text-3xl font-bold leading-tight tracking-tight uppercase">
+                        <h2 className="text-[1.8rem] md:text-3xl font-bold leading-tight tracking-tight uppercase">
                             De nerd antissocial a bicampeão brasileiro de oratória: <br />
                             <span className="text-[#C9A24B]">Conheça o seu mentor</span>
                         </h2>
 
                         <div className="relative inline-block w-full">
-                            <div className="bg-[#C9A24B] text-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-xl shadow-[#C9A24B]/20">
-                                <h3 className="text-2xl md:text-4xl leading-tight">
+                            <div className="bg-[#C9A24B] text-white p-5 md:p-8 rounded-2xl md:rounded-3xl shadow-xl shadow-[#C9A24B]/20">
+                                <h3 className="text-xl md:text-4xl leading-tight">
                                     Giovanni Begossi, o<br />
                                     <strong>"El Professor da Oratória"</strong>
                                 </h3>
