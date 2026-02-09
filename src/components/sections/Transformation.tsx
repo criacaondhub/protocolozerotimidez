@@ -1,25 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Masonry from "@/components/ui/Masonry";
 import ColorBends from "@/components/ui/ColorBends";
-
-const masonryItems = [
-    // Recalibrando para uma altura compacta de ~610px
-    // Coluna 1: 300 + 278 = 578 + 16 (gap) = 594
-    { id: 1, img: "assets/antigo-1.jpeg", height: 300 },
-    { id: 2, img: "assets/antigo-2.jpeg", height: 278, bgPosition: "top" },
-
-    // Coluna 2: 280 + 298 = 578 + 16 (gap) = 594
-    { id: 4, img: "assets/antigo-4.jpg", height: 280 },
-    { id: 5, img: "assets/antigo-5.jpg", height: 298 },
-
-    // Coluna 3: 350 + 228 = 578 + 16 (gap) = 594
-    { id: 10, img: "assets/antigo-10.jpg", height: 350 },
-    { id: 9, img: "assets/antigo-9.jpg", height: 228, bgPosition: "top" },
-
-    // Distribuindo os itens restantes
-    { id: 3, img: "assets/antigo-3.jpeg", height: 220 },
-    { id: 7, img: "assets/antigo-7.jpeg", height: 220, bgPosition: "top" },
-];
 
 export function Transformation() {
     return (
@@ -72,15 +52,13 @@ export function Transformation() {
                     </div>
                 </div>
 
-                {/* Right Column - Masonry */}
-                <div className="relative min-h-[610px] w-full self-stretch">
-                    <Masonry
-                        items={masonryItems}
-                        gridGap={16}
-                        forceColumns={3}
-                        animateFrom="bottom"
-                        stagger={0.08}
-                        duration={0.8}
+                {/* Right Column - Giovanni Antes Image */}
+                <div className="flex justify-center lg:justify-end items-center h-full">
+                    <img
+                        src="assets/giovanni-antes.png"
+                        alt="Giovanni Antes"
+                        className="w-auto object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
+                        style={{ height: '713px' }}
                     />
                 </div>
             </div>
