@@ -26,10 +26,10 @@ export function Expert() {
                         </h2>
 
                         <div className="relative inline-block w-full">
-                            <div className="bg-[#C9A24B] text-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-xl shadow-[#C9A24B]/20 -rotate-1">
+                            <div className="bg-[#C9A24B] text-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-xl shadow-[#C9A24B]/20">
                                 <h3 className="text-2xl md:text-4xl leading-tight">
-                                    Giovanni Begossi,<br />
-                                    <strong>o El Professor da Oratória</strong>
+                                    Giovanni Begossi, o<br />
+                                    <strong>"El Professor da Oratória"</strong>
                                 </h3>
                             </div>
                         </div>
