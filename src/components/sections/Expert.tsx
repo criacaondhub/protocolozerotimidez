@@ -36,15 +36,11 @@ export function Expert() {
 
                         <div className="space-y-6 text-lg md:text-xl text-zinc-700 leading-relaxed font-medium">
                             <p>
-                                Bicampeão brasileiro de oratória, palestrante internacional, advogado e TEDx Speaker e autor do best-seller Como Falar Bem e Ficar Rico - Top #1 na Amazon em “Falar em Público”.
+                                Mais conhecido como <strong>El Professor da Oratória</strong>, Giovanni Begossi é <strong>bicampeão brasileiro de oratória</strong>, advogado, palestrante internacional, TEDx Speaker e autor do best seller <strong>COMO FALAR BEM E FICAR RICO</strong>, o livro de oratória mais vendido da Amazon.
                             </p>
 
                             <p>
-                                Com mais de 15 anos de experiência, Giovanni já treinou desde empresários e atletas olímpicos até políticos, desembargadores, grandes empresas e também para corporações de elite, como a SWAT de São Paulo (GATE) e o Exército Brasileiro (EsAO).
-                            </p>
-
-                            <p>
-                                Hoje, lidera o maior perfil de comunicação e oratória da América Latina, com mais de <span className="text-[#C9A24B] font-bold">4 milhões de seguidores</span>.
+                                Com mais de <strong>15 anos de experiência</strong> e criador do maior perfil de oratória da América Latina com mais de <strong>4.5 milhões de seguidores</strong> nas redes sociais, Giovanni treina a comunicação persuasiva de políticos, atletas campeões olímpicos, bilionários e grandes personalidades como Natalia Beauty, Sheila Mello e Cela, além de instituições renomadas como Falconi, Biogen, Johnson & Johnson e até mesmo da <strong>SWAT de São Paulo (GATE), do BOPE e do Exército Brasileiro (EsAO)</strong>.
                             </p>
 
                             <p className="italic border-l-4 border-[#C9A24B] pl-6 py-2">
