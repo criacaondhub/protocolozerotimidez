@@ -3,7 +3,7 @@ import ColorBends from "@/components/ui/ColorBends";
 
 export function Transformation() {
     return (
-        <section className="bg-black text-white py-24 relative overflow-hidden min-h-screen flex items-center">
+        <section className="bg-black text-white py-[80px] md:py-24 relative overflow-hidden min-h-screen flex items-center">
             {/* Animated Background - Hidden on mobile */}
             <div className="absolute inset-0 z-0 opacity-60 hidden lg:block">
                 <ColorBends

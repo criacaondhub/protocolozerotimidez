@@ -21,7 +21,7 @@ export function DecisionSection() {
     ];
 
     return (
-        <section className="bg-black text-white py-24 relative overflow-hidden">
+        <section className="bg-black text-white py-[80px] md:py-24 relative overflow-hidden">
             {/* Background Animation - Hidden on mobile */}
             <div className="absolute inset-0 z-0 opacity-50 hidden lg:block">
                 <Beams

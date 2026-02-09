@@ -51,7 +51,7 @@ export function FAQ() {
     ];
 
     return (
-        <section id="faq" className="bg-black text-white pt-24 pb-0 relative overflow-hidden">
+        <section id="faq" className="bg-black text-white py-[80px] md:pt-24 md:pb-0 relative overflow-hidden">
             {/* FAQ Header - Outside restricted container to avoid clipping */}
             <div className="text-center mb-10 px-4 sm:px-6">
                 <h2 className="text-[32px] sm:text-4xl md:text-5xl lg:text-[4.5rem] font-black tracking-tighter uppercase leading-tight text-[#f9efaf] break-words">

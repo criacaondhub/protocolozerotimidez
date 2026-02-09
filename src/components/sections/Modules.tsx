@@ -99,16 +99,16 @@ const col3 = [modulesData[2], modulesData[5]];
 
 export function Modules() {
     return (
-        <section className="bg-white text-black py-24 relative overflow-hidden">
-            {/* Semi-ellipse Transition Top */}
-            <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-30">
+        <section className="bg-white text-black py-[80px] md:py-24 relative overflow-hidden">
+            {/* Semi-ellipse Transition Top - Hidden on mobile */}
+            <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-30 hidden md:block">
                 <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[120%] -left-[10%] h-[80px] fill-black">
                     <path d="M0,0 h1200 v50 Q600,120 0,50 Z"></path>
                 </svg>
             </div>
 
-            <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-10 md:pt-16">
-                <header className="mb-24 text-center">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10 md:pt-16">
+                <header className="mb-12 md:mb-24 text-center">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -154,8 +154,8 @@ export function Modules() {
                 </div>
             </div>
 
-            {/* Semi-ellipse Transition Bottom */}
-            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-30 translate-y-[1px]">
+            {/* Semi-ellipse Transition Bottom - Hidden on mobile */}
+            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-30 translate-y-[1px] hidden md:block">
                 <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[120%] -left-[10%] h-[80px] fill-black rotate-180">
                     <path d="M0,0 h1200 v50 Q600,120 0,50 Z"></path>
                 </svg>

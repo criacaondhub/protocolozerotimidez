@@ -5,7 +5,7 @@ import Beams from "@/components/ui/Beams";
 
 export function Pricing() {
     return (
-        <section id="preco" className="bg-black text-white py-24 relative overflow-hidden min-h-screen flex items-center">
+        <section id="preco" className="bg-black text-white py-[80px] md:py-24 relative overflow-hidden min-h-screen flex items-center">
             {/* New Animated Background: Beams - Hidden on mobile */}
             <div className="absolute inset-0 z-0 opacity-50 hidden lg:block">
                 <Beams

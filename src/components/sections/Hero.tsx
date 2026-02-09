@@ -80,7 +80,7 @@ export function Hero() {
                     </Button>
 
                     {/* Trust Badges Carousel */}
-                    <div className="w-full overflow-hidden relative z-50 py-2">
+                    <div className="w-full overflow-hidden relative z-50 py-2 mb-12">
                         <motion.div
                             className="flex gap-6"
                             animate={{ x: ["0%", "-50%"] }}

@@ -21,16 +21,16 @@ const relationshipsPoints = [
 
 export function CostSection() {
     return (
-        <section className="bg-white text-black py-24 relative overflow-hidden min-h-screen flex flex-col justify-center">
-            {/* Semi-ellipse Transition Top */}
-            <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-30">
+        <section className="bg-white text-black py-[80px] md:py-24 relative overflow-hidden min-h-screen flex flex-col justify-center">
+            {/* Semi-ellipse Transition Top - Hidden on mobile */}
+            <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-30 hidden md:block">
                 <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[120%] -left-[10%] h-[80px] fill-black">
                     <path d="M0,0 h1200 v50 Q600,120 0,50 Z"></path>
                 </svg>
             </div>
 
             <div className="container mx-auto px-4 sm:px-6 relative z-20">
-                <header className="text-center mb-16 mt-12">
+                <header className="text-center mb-16">
                     <h2 className="text-3xl md:text-[2.5rem] font-bold text-black mb-6 leading-tight max-w-4xl mx-auto">
                         A timidez custa (muito) caro: <br className="hidden lg:block" />
                         <span style={{ color: '#c9a24b' }}>Custa seu dinheiro e sua felicidade.</span>
@@ -87,8 +87,8 @@ export function CostSection() {
                 </div>
             </div>
 
-            {/* Semi-ellipse Transition Bottom */}
-            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-30 translate-y-[1px]">
+            {/* Semi-ellipse Transition Bottom - Hidden on mobile */}
+            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-30 translate-y-[1px] hidden md:block">
                 <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[120%] -left-[10%] h-[80px] fill-black rotate-180">
                     <path d="M0,0 h1200 v50 Q600,120 0,50 Z"></path>
                 </svg>

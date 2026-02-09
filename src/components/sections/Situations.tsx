@@ -51,7 +51,7 @@ const situations = [
 
 export function Situations() {
     return (
-        <section className="bg-black py-32 relative z-20">
+        <section className="bg-black py-[80px] md:py-32 relative z-20">
             {/* Animated Background - Hidden on mobile */}
             <div className="absolute inset-0 z-0 opacity-25 hidden lg:block">
                 <ColorBends
@@ -70,7 +70,7 @@ export function Situations() {
             </div>
 
             {/* Circular Text Divider */}
-            <div className="absolute top-0 left-0 w-full flex justify-center z-[100] px-4 mt-0 lg:-translate-y-1/2">
+            <div className="absolute top-[-30px] left-0 w-full flex justify-center z-[100] px-4 lg:top-0 lg:mt-0 lg:-translate-y-1/2">
                 <div className="relative w-32 h-32 md:w-48 md:h-48 flex items-center justify-center">
                     <motion.div
                         animate={{ rotate: 360 }}
@@ -104,7 +104,7 @@ export function Situations() {
             </div>
 
             <div className="container mx-auto px-4 sm:px-6 relative z-10">
-                <h2 className="text-[26px] md:text-[2.5rem] font-bold text-center text-white mb-12 md:mb-20 leading-tight">
+                <h2 className="text-[26px] md:text-[2.5rem] font-bold text-center text-white mt-20 mb-12 md:mt-0 md:mb-20 leading-tight">
                     Você reconhece alguma dessas situações?
                 </h2>
 
