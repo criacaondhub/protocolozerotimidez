@@ -161,7 +161,7 @@ export function Situations() {
           inset: 0;
           border-radius: inherit;
           padding: 1.5px;
-          background: linear-gradient(45deg, #ffdd80, #000000 60%);
+          background: linear-gradient(180deg, #f9efaf, #000000 70%);
           -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
           -webkit-mask-composite: xor;
           mask-composite: exclude;
@@ -197,42 +197,46 @@ function SituationCard({ title, icon, items }: SituationCardProps) {
     return (
         <div
             onMouseMove={handleMouseMove}
-            className="glass-card rounded-[2.5rem] p-8 md:p-12 flex flex-col group h-full"
+            className="glass-card rounded-[2.5rem] flex flex-col group h-full overflow-hidden border border-[#ffdd80]/20"
         >
-            {/* Spotlight effect */}
-            <motion.div
-                className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100"
-                style={{
-                    background: useMotionTemplate`
-            radial-gradient(
-              450px circle at ${mouseX}px ${mouseY}px,
-              rgba(255, 221, 128, 0.08),
-              transparent 80%
-            )
-          `,
-                }}
-            />
-
-            <div className="flex items-center gap-4 mb-10">
-                <div className="text-[#ffdd80]">
+            {/* Header Section */}
+            <div className="bg-[#f9efaf] px-6 py-5 flex items-center justify-center gap-3 text-black text-center relative z-10">
+                <div className="shrink-0 scale-90">
                     {icon}
                 </div>
-                <h3 className="text-[1.35rem] font-extrabold text-white leading-tight first-letter:uppercase">
+                <h3 className="text-[1.2rem] md:text-[1.3rem] font-black leading-tight first-letter:uppercase uppercase tracking-tight">
                     {title}
                 </h3>
             </div>
 
-            <div className="flex flex-col gap-6">
-                {items.map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-4 py-1">
-                        <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center -mt-1">
-                            <img src={`assets/${item.icon}`} alt="" className="w-full h-full object-contain" />
+            {/* Content Area */}
+            <div className="p-8 md:p-10 flex flex-col flex-grow relative">
+                {/* Spotlight effect overlay */}
+                <motion.div
+                    className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
+                    style={{
+                        background: useMotionTemplate`
+                radial-gradient(
+                  450px circle at ${mouseX}px ${mouseY}px,
+                  rgba(255, 221, 128, 0.12),
+                  transparent 80%
+                )
+              `,
+                    }}
+                />
+
+                <div className="flex flex-col gap-6 relative z-10">
+                    {items.map((item, idx) => (
+                        <div key={idx} className="flex items-center gap-4 py-1">
+                            <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center -mt-1">
+                                <img src={`assets/${item.icon}`} alt="" className="w-full h-full object-contain" />
+                            </div>
+                            <div className="text-[1.1rem] leading-[1.5] text-white/90 font-medium">
+                                {item.text}
+                            </div>
                         </div>
-                        <div className="text-[1.125rem] leading-[1.5] text-white/80 font-normal">
-                            {item.text}
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );
