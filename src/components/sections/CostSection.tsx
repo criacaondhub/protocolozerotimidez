@@ -14,7 +14,7 @@ const relationshipsPoints = [
     <>Conexões que você não fez por medo <br /> <span className="font-semibold">medo de puxar conversa</span>;</>,
     <>Ser <span className="font-semibold">excluído de grupos</span> e deixar de ser <br /> convidado para eventos;</>,
     <>Amizades que não aconteceram porque <br /> você <span className="font-semibold">não sabia o que dizer</span>;</>,
-    <>Momentos que você evitou por medo <br /> <span className="font-semibold">ser julgado</span>;</>,
+    <>Momentos que você evitou por medo <br /> de <span className="font-semibold">ser julgado</span>;</>,
     <>A frustração de voltar para casa pensando <br /> <span className="font-semibold">"eu deveria ter falado"</span>;</>,
     <>A <span className="font-semibold">ansiedade</span> que vem antes de qualquer compromisso social.</>
 ];
@@ -40,7 +40,7 @@ export function CostSection() {
                     </p>
                 </header>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto">
                     {/* Career Box */}
                     <motion.div
                         whileHover={{ y: -10 }}
@@ -55,7 +55,7 @@ export function CostSection() {
 
                         <ul className="space-y-6">
                             {careerPoints.map((point, idx) => (
-                                <li key={idx} className="flex items-start text-[1.125rem] text-zinc-700 leading-snug">
+                                <li key={idx} className="flex items-start text-[1.25rem] text-zinc-700 leading-snug">
                                     <span className="text-zinc-400 font-bold mr-3 shrink-0">•</span>
                                     <span>{point}</span>
                                 </li>
@@ -77,7 +77,7 @@ export function CostSection() {
 
                         <ul className="space-y-6">
                             {relationshipsPoints.map((point, idx) => (
-                                <li key={idx} className="flex items-start text-[1.125rem] text-zinc-700 leading-snug">
+                                <li key={idx} className="flex items-start text-[1.25rem] text-zinc-700 leading-snug">
                                     <span className="text-zinc-400 font-bold mr-3 shrink-0">•</span>
                                     <span>{point}</span>
                                 </li>
