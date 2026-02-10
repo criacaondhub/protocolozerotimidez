@@ -1,5 +1,5 @@
 import React, {
-    ComponentPropsWithRef,
+    type ComponentPropsWithRef,
     useCallback,
     useEffect,
     useState
