@@ -1,0 +1,121 @@
+.embla {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    --slide-height: 500px;
+    --slide-spacing: 1.5rem;
+    --slide-size: 42%;
+    height: var(--slide-height);
+}
+
+.embla__viewport {
+    overflow: hidden;
+    height: var(--slide-height);
+}
+
+.embla__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+    height: 100%;
+}
+
+.embla__slide {
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.embla__slide__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s linear;
+}
+
+.embla__slide__inner img {
+    display: block;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.embla__controls {
+    pointer-events: none;
+}
+
+.embla__buttons {
+    display: flex;
+    pointer-events: auto;
+}
+
+.embla__button {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #c9a24b;
+    touch-action: manipulation;
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    width: 44px;
+    height: 44px;
+    z-index: 50;
+    border-radius: 50%;
+    color: #c9a24b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.embla__button:hover:not(:disabled) {
+    background-color: #c9a24b;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(201, 162, 75, 0.5);
+}
+
+.embla__button:disabled {
+    opacity: 0.1;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.embla__button svg {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+@media (min-width: 640px) {
+    .embla {
+        --slide-size: 42%;
+        --slide-spacing: 0.5rem;
+    }
+
+    .embla__viewport {
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .embla {
+        --slide-size: 85%;
+        --slide-spacing: 1rem;
+    }
+
+    .embla__button {
+        width: 36px;
+        height: 36px;
+    }
+}
