@@ -32,7 +32,7 @@ export function Transformation() {
                     {/* Image - Placed between title and text on mobile */}
                     <div className="flex lg:hidden justify-center items-center w-full">
                         <img
-                            src="assets/giovanni-antes.png"
+                            src="assets/giovanni-antes.webp"
                             alt="Giovanni Antes"
                             className="w-auto h-[350px] object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
                             loading="lazy"
@@ -72,7 +72,7 @@ export function Transformation() {
                 {/* Right Column - Giovanni Antes Image - DESKTOP ONLY */}
                 <div className="hidden lg:flex justify-center lg:justify-end items-center h-full">
                     <img
-                        src="assets/giovanni-antes.png"
+                        src="assets/giovanni-antes.webp"
                         alt="Giovanni Antes"
                         className="w-auto h-[713px] object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
                         loading="lazy"

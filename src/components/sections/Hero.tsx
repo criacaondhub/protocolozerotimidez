@@ -22,10 +22,11 @@ export function Hero() {
                 {/* Mobile Banner Image */}
                 <div className="relative w-full">
                     <img
-                        src="assets/banner-hero-mobile.png"
+                        src="assets/banner-hero-mobile.webp"
                         alt="Giovanni Begossi"
                         className="w-full h-auto object-cover"
                         fetchPriority="high"
+                        decoding="async"
                         onError={(e) => {
                             e.currentTarget.style.display = 'none';
                         }}
@@ -39,10 +40,11 @@ export function Hero() {
                     {/* Logo */}
                     <div className="w-44 mb-6">
                         <img
-                            src="assets/logo-zerotimidez.png"
+                            src="assets/logo-zerotimidez.webp"
                             alt="Logo Protocolo Zero Timidez"
                             className="w-full h-auto"
                             fetchPriority="high"
+                            decoding="async"
                             onError={(e) => {
                                 e.currentTarget.style.display = 'none';
                             }}
@@ -121,10 +123,11 @@ export function Hero() {
                     {/* Logo */}
                     <div className="w-56">
                         <img
-                            src="assets/logo-zerotimidez.png"
+                            src="assets/logo-zerotimidez.webp"
                             alt="Logo Protocolo Zero Timidez"
                             className="w-full h-auto"
                             fetchPriority="high"
+                            decoding="async"
                             onError={(e) => {
                                 e.currentTarget.style.display = 'none';
                             }}
@@ -187,10 +190,11 @@ export function Hero() {
             {/* Right Side Image - DESKTOP ONLY */}
             <div className="absolute top-0 right-0 h-full w-full lg:w-[50%] pointer-events-none hidden lg:flex items-start justify-end overflow-hidden">
                 <img
-                    src="assets/banner-hero.png"
+                    src="assets/banner-hero.webp"
                     alt="Giovanni Begossi"
                     className="h-full w-auto object-contain object-top select-none"
                     fetchPriority="high"
+                    decoding="async"
                     onError={(e) => {
                         e.currentTarget.style.display = 'none';
                     }}

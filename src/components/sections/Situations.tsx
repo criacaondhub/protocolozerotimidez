@@ -8,43 +8,43 @@ const situations = [
         title: "Em uma apresentação:",
         icon: <Presentation className="w-7 h-7" />,
         items: [
-            { icon: "icone-check.png", text: "Você se preparou por semanas." },
-            { icon: "icone-freeze-face.png", text: <>Mas quando sobe no palco, as mãos suam, a boca seca e você só consegue pensar: <i>"Todos estão me julgando"</i></> },
+            { icon: "icone-check.webp", text: "Você se preparou por semanas." },
+            { icon: "icone-freeze-face.webp", text: <>Mas quando sobe no palco, as mãos suam, a boca seca e você só consegue pensar: <i>"Todos estão me julgando"</i></> },
         ]
     },
     {
         title: "Fazendo networking:",
         icon: <Users className="w-7 h-7" />,
         items: [
-            { icon: "icone-fear-face.png", text: <>Você vê aquela pessoa importante que poderia abrir portas, mas sua mente fica repetindo: <i>"E se eu falar besteira?"</i>, <i>"E se ela me ignorar?"</i></> },
+            { icon: "icone-fear-face.webp", text: <>Você vê aquela pessoa importante que poderia abrir portas, mas sua mente fica repetindo: <i>"E se eu falar besteira?"</i>, <i>"E se ela me ignorar?"</i></> },
         ]
     },
     {
         title: "NA REUNIÃO DO TRABALHO:",
         icon: <Briefcase className="w-7 h-7" />,
         items: [
-            { icon: "icone-check.png", text: "Você sabe a resposta." },
-            { icon: "icone-check.png", text: "Tem a ideia perfeita." },
-            { icon: "icone-shaking-face.png", text: "Mas quando chega sua vez de falar, a voz trava, o coração acelera e você deixa passar." },
+            { icon: "icone-check.webp", text: "Você sabe a resposta." },
+            { icon: "icone-check.webp", text: "Tem a ideia perfeita." },
+            { icon: "icone-shaking-face.webp", text: "Mas quando chega sua vez de falar, a voz trava, o coração acelera e você deixa passar." },
         ]
     },
     {
         title: "Gravando vídeos:",
         icon: <Video className="w-7 h-7" />,
         items: [
-            { icon: "icone-check.png", text: "Você aperta o REC." },
-            { icon: "icone-stop.png", text: "Tenta falar. Para. Apaga." },
-            { icon: "icone-tedio-face.png", text: "Tenta de novo. Para de novo." },
-            { icon: "icone-weary-face.png", text: <>E desiste porque pensa: <br className="hidden lg:block" /> <i>"Não sou bom nisso mesmo"</i></> },
+            { icon: "icone-check.webp", text: "Você aperta o REC." },
+            { icon: "icone-stop.webp", text: "Tenta falar. Para. Apaga." },
+            { icon: "icone-tedio-face.webp", text: "Tenta de novo. Para de novo." },
+            { icon: "icone-weary-face.webp", text: <>E desiste porque pensa: <br className="hidden lg:block" /> <i>"Não sou bom nisso mesmo"</i></> },
         ]
     },
     {
         title: "No áudio do WhatsApp:",
         icon: <Mic className="w-7 h-7" />,
         items: [
-            { icon: "icone-fala.png", text: "Você grava, escuta, deleta." },
-            { icon: "icone-repeat.png", text: <>Grava de novo, escuta de novo, <br className="hidden lg:block" /> deleta de novo.</> },
-            { icon: "icone-calado.png", text: "Até que desista e mande só o texto." },
+            { icon: "icone-fala.webp", text: "Você grava, escuta, deleta." },
+            { icon: "icone-repeat.webp", text: <>Grava de novo, escuta de novo, <br className="hidden lg:block" /> deleta de novo.</> },
+            { icon: "icone-calado.webp", text: "Até que desista e mande só o texto." },
         ]
     }
 ];
@@ -95,7 +95,7 @@ export function Situations() {
                     {/* Static Center Icon */}
                     <div className="bg-black p-4 rounded-full relative z-10">
                         <img
-                            src="assets/icone-zt.png"
+                            src="assets/icone-zt.webp"
                             alt="ZT"
                             className="h-8 md:h-[40px] w-auto"
                         />

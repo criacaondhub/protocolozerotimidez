@@ -78,7 +78,7 @@ export function Pricing() {
                             {/* Payment Icons */}
                             <div className="flex flex-col items-center pt-4">
                                 <img
-                                    src="assets/logos-credito.png"
+                                    src="assets/logos-credito.webp"
                                     alt="Formas de Pagamento"
                                     className="h-8 md:h-12 w-auto object-contain"
                                 />

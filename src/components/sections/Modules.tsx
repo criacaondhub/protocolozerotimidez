@@ -42,11 +42,12 @@ export function Modules() {
                         slides={Array.from({ length: 8 }).map((_, idx) => (
                             <div key={idx} className="w-full flex items-center justify-center">
                                 <img
-                                    src={`assets/modulo-0${idx + 1}.png`}
+                                    src={`assets/modulo-0${idx + 1}.webp`}
                                     alt={`Módulo ${idx + 1}`}
                                     className="h-[500px] w-auto object-contain"
                                     loading="lazy"
                                     fetchPriority="low"
+                                    decoding="async"
                                 />
                             </div>
                         ))}

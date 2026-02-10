@@ -57,7 +57,7 @@ export function Expert() {
                     >
                         <div className="absolute -inset-4 bg-[#C9A24B]/10 rounded-full blur-3xl" />
                         <img
-                            src="assets/giovanni.png"
+                            src="assets/giovanni.webp"
                             alt="Giovanni Begossi"
                             className="relative z-10 w-full max-w-2xl mx-auto drop-shadow-2xl"
                             loading="lazy"
