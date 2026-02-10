@@ -45,6 +45,8 @@ export function Modules() {
                                     src={`assets/modulo-0${idx + 1}.png`}
                                     alt={`Módulo ${idx + 1}`}
                                     className="h-[500px] w-auto object-contain"
+                                    loading="lazy"
+                                    fetchPriority="low"
                                 />
                             </div>
                         ))}

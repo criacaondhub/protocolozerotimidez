@@ -60,6 +60,8 @@ export function Expert() {
                             src="assets/giovanni.png"
                             alt="Giovanni Begossi"
                             className="relative z-10 w-full max-w-2xl mx-auto drop-shadow-2xl"
+                            loading="lazy"
+                            fetchPriority="low"
                         />
                     </motion.div>
 

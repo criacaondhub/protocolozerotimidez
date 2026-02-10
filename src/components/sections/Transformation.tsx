@@ -35,6 +35,8 @@ export function Transformation() {
                             src="assets/giovanni-antes.png"
                             alt="Giovanni Antes"
                             className="w-auto h-[350px] object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
+                            loading="lazy"
+                            fetchPriority="low"
                         />
                     </div>
 
@@ -73,6 +75,8 @@ export function Transformation() {
                         src="assets/giovanni-antes.png"
                         alt="Giovanni Antes"
                         className="w-auto h-[713px] object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
+                        loading="lazy"
+                        fetchPriority="low"
                     />
                 </div>
             </div>

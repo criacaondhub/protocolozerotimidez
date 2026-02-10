@@ -25,6 +25,7 @@ export function Hero() {
                         src="assets/banner-hero-mobile.png"
                         alt="Giovanni Begossi"
                         className="w-full h-auto object-cover"
+                        fetchPriority="high"
                         onError={(e) => {
                             e.currentTarget.style.display = 'none';
                         }}
@@ -41,6 +42,7 @@ export function Hero() {
                             src="assets/logo-zerotimidez.png"
                             alt="Logo Protocolo Zero Timidez"
                             className="w-full h-auto"
+                            fetchPriority="high"
                             onError={(e) => {
                                 e.currentTarget.style.display = 'none';
                             }}
@@ -122,6 +124,7 @@ export function Hero() {
                             src="assets/logo-zerotimidez.png"
                             alt="Logo Protocolo Zero Timidez"
                             className="w-full h-auto"
+                            fetchPriority="high"
                             onError={(e) => {
                                 e.currentTarget.style.display = 'none';
                             }}
@@ -187,6 +190,7 @@ export function Hero() {
                     src="assets/banner-hero.png"
                     alt="Giovanni Begossi"
                     className="h-full w-auto object-contain object-top select-none"
+                    fetchPriority="high"
                     onError={(e) => {
                         e.currentTarget.style.display = 'none';
                     }}
