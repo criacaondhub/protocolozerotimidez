@@ -3,7 +3,7 @@
 # Build script for Docker image
 # Usage: ./build.sh
 
-IMAGE_NAME="protocolozerotimidez"
+IMAGE_NAME="protocolo_zero_timidez"
 TAG="latest"
 
 echo "🚀 Building Docker image: $IMAGE_NAME:$TAG"
