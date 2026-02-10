@@ -6,6 +6,7 @@
     --slide-spacing: 1.5rem;
     --slide-size: 42%;
     height: var(--slide-height);
+    overflow: visible;
 }
 
 .embla__viewport {

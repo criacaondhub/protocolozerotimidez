@@ -76,10 +76,12 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current)
                     const opacity = Math.min(Math.max(tweenValue, 0.3), 1).toString()
                     const scale = Math.min(Math.max(tweenValue, 0.85), 1).toString()
+                    const blur = (4 * (1 - Math.min(Math.max(tweenValue, 0), 1))).toFixed(2)
                     const targetNode = tweenNodes.current[slideIndex]
                     if (targetNode) {
                         targetNode.style.opacity = opacity
                         targetNode.style.transform = `scale(${scale})`
+                        targetNode.style.filter = `blur(${blur}px)`
                     }
                 })
             })
@@ -103,7 +105,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     }, [emblaApi, tweenFocus, setTweenFactor, setTweenNodes])
 
     return (
-        <div className="embla">
+        <div className="embla relative">
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
                     {slides.map((slide, index) => (
@@ -116,7 +118,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 </div>
             </div>
 
-            <div className="embla__controls absolute top-1/2 -translate-y-1/2 left-0 right-0 pointer-events-none flex justify-between px-4 sm:px-12">
+            {/* Side Fades - White gradients to blend slides at the edges */}
+            <div className="absolute top-0 left-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none hidden md:block" />
+            <div className="absolute top-0 right-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none hidden md:block" />
+
+            <div className="embla__controls absolute top-1/2 -translate-y-1/2 -left-4 -right-4 lg:-left-16 lg:-right-16 pointer-events-none flex justify-between z-30">
                 <div className="embla__buttons pointer-events-auto">
                     <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
                 </div>

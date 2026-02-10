@@ -37,14 +37,14 @@ export function Modules() {
                     </motion.p>
                 </header>
 
-                <div className="max-w-5xl mx-auto">
+                <div className="max-w-5xl mx-auto px-4 md:px-16 lg:px-0">
                     <EmblaCarousel
                         slides={Array.from({ length: 8 }).map((_, idx) => (
                             <div key={idx} className="w-full flex items-center justify-center">
                                 <img
                                     src={`assets/modulo-0${idx + 1}.png`}
                                     alt={`Módulo ${idx + 1}`}
-                                    className="h-[500px] w-auto object-contain drop-shadow-2xl"
+                                    className="h-[500px] w-auto object-contain"
                                 />
                             </div>
                         ))}
