@@ -65,7 +65,7 @@ export function Transformation() {
                     <div className="pt-4 w-full flex justify-center lg:justify-start">
                         <Button
                             size="lg"
-                            className="bg-emerald-600 hover:bg-emerald-500 text-white font-black py-6 md:py-8 px-8 md:px-0 text-[16px] md:text-xl rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight shadow-emerald-900/20 w-full md:w-auto"
+                            className="bg-emerald-600 hover:bg-emerald-500 text-white font-black py-6 md:py-8 text-[16px] md:text-xl rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight shadow-emerald-900/20 w-full md:w-auto md:px-12"
                             onClick={() => document.getElementById('preco')?.scrollIntoView({ behavior: 'smooth' })}
                         >
                             QUERO ESSA TRANSFORMAÇÃO
