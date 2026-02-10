@@ -94,11 +94,15 @@ export function Situations() {
 
                     {/* Static Center Icon */}
                     <div className="bg-black p-4 rounded-full relative z-10">
-                        <img
-                            src="assets/icone-zt.webp"
-                            alt="ZT"
-                            className="h-8 md:h-[40px] w-auto"
-                        />
+                        <picture>
+                            <source media="(max-width: 768px)" srcSet="assets/icone-zt-mobile.webp" />
+                            <img
+                                src="assets/icone-zt.webp"
+                                alt="ZT"
+                                className="h-8 md:h-[40px] w-auto"
+                                decoding="async"
+                            />
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -229,7 +233,16 @@ function SituationCard({ title, icon, items }: SituationCardProps) {
                     {items.map((item, idx) => (
                         <div key={idx} className="flex flex-col lg:flex-row items-center lg:items-start gap-3 lg:gap-4 py-1">
                             <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
-                                <img src={`assets/${item.icon}`} alt="" className="w-full h-full object-contain" />
+                                <picture>
+                                    <source media="(max-width: 768px)" srcSet={`assets/${item.icon.replace('.webp', '-mobile.webp')}`} />
+                                    <img
+                                        src={`assets/${item.icon}`}
+                                        alt=""
+                                        className="w-full h-full object-contain"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </picture>
                             </div>
                             <div className="text-[16px] leading-[1.5] text-white/90 font-medium text-center lg:text-left">
                                 {item.text}

@@ -56,13 +56,17 @@ export function Expert() {
                         className="relative"
                     >
                         <div className="absolute -inset-4 bg-[#C9A24B]/10 rounded-full blur-3xl" />
-                        <img
-                            src="assets/giovanni.webp"
-                            alt="Giovanni Begossi"
-                            className="relative z-10 w-full max-w-2xl mx-auto drop-shadow-2xl"
-                            loading="lazy"
-                            fetchPriority="low"
-                        />
+                        <picture>
+                            <source media="(max-width: 1024px)" srcSet="assets/giovanni-mobile.webp" />
+                            <img
+                                src="assets/giovanni.webp"
+                                alt="Giovanni Begossi"
+                                className="relative z-10 w-full max-w-2xl mx-auto drop-shadow-2xl"
+                                loading="lazy"
+                                fetchPriority="low"
+                                decoding="async"
+                            />
+                        </picture>
                     </motion.div>
 
                 </div>

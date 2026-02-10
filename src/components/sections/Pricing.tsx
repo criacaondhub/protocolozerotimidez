@@ -77,11 +77,16 @@ export function Pricing() {
 
                             {/* Payment Icons */}
                             <div className="flex flex-col items-center pt-4">
-                                <img
-                                    src="assets/logos-credito.webp"
-                                    alt="Formas de Pagamento"
-                                    className="h-8 md:h-12 w-auto object-contain"
-                                />
+                                <picture>
+                                    <source media="(max-width: 768px)" srcSet="assets/logos-credito-mobile.webp" />
+                                    <img
+                                        src="assets/logos-credito.webp"
+                                        alt="Formas de Pagamento"
+                                        className="h-8 md:h-12 w-auto object-contain"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </picture>
                             </div>
                         </div>
                     </motion.div>

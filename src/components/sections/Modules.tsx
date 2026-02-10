@@ -41,14 +41,17 @@ export function Modules() {
                     <EmblaCarousel
                         slides={Array.from({ length: 8 }).map((_, idx) => (
                             <div key={idx} className="w-full flex items-center justify-center">
-                                <img
-                                    src={`assets/modulo-0${idx + 1}.webp`}
-                                    alt={`Módulo ${idx + 1}`}
-                                    className="h-[500px] w-auto object-contain"
-                                    loading="lazy"
-                                    fetchPriority="low"
-                                    decoding="async"
-                                />
+                                <picture>
+                                    <source media="(max-width: 768px)" srcSet={`assets/modulo-0${idx + 1}-mobile.webp`} />
+                                    <img
+                                        src={`assets/modulo-0${idx + 1}.webp`}
+                                        alt={`Módulo ${idx + 1}`}
+                                        className="h-[500px] w-auto object-contain"
+                                        loading="lazy"
+                                        fetchPriority="low"
+                                        decoding="async"
+                                    />
+                                </picture>
                             </div>
                         ))}
                         options={{ align: 'center', loop: true, duration: 20 }}

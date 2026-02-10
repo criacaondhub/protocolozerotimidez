@@ -40,7 +40,7 @@ export function Hero() {
                     {/* Logo */}
                     <div className="w-44 mb-6">
                         <img
-                            src="assets/logo-zerotimidez.webp"
+                            src="assets/logo-zerotimidez-mobile.webp"
                             alt="Logo Protocolo Zero Timidez"
                             className="w-full h-auto"
                             fetchPriority="high"

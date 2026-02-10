@@ -31,13 +31,17 @@ export function Transformation() {
 
                     {/* Image - Placed between title and text on mobile */}
                     <div className="flex lg:hidden justify-center items-center w-full">
-                        <img
-                            src="assets/giovanni-antes.webp"
-                            alt="Giovanni Antes"
-                            className="w-auto h-[350px] object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
-                            loading="lazy"
-                            fetchPriority="low"
-                        />
+                        <picture>
+                            <source media="(max-width: 1024px)" srcSet="assets/giovanni-antes-mobile.webp" />
+                            <img
+                                src="assets/giovanni-antes.webp"
+                                alt="Giovanni Antes"
+                                className="w-auto h-[350px] object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
+                                loading="lazy"
+                                fetchPriority="low"
+                                decoding="async"
+                            />
+                        </picture>
                     </div>
 
                     <div className="space-y-6 text-lg text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0">
