@@ -3,17 +3,7 @@ import { ShieldCheck, Calendar, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Beams from "@/components/ui/Beams";
 
-import { useEffect, useState } from "react";
-
 export function Pricing() {
-    const [checkoutUrl, setCheckoutUrl] = useState('https://pay.hub.la/M1w9Tsjvc5zJadbwasPZ');
-
-    useEffect(() => {
-        const params = new URLSearchParams(window.location.search);
-        if (params.toString()) {
-            setCheckoutUrl(`https://pay.hub.la/M1w9Tsjvc5zJadbwasPZ?${params.toString()}`);
-        }
-    }, []);
     return (
         <section id="preco" className="bg-black text-white py-[80px] md:py-24 relative overflow-hidden min-h-screen flex items-center">
             {/* New Animated Background: Beams - Hidden on mobile */}
@@ -81,7 +71,7 @@ export function Pricing() {
                             <Button
                                 size="lg"
                                 className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-8 text-[16px] md:text-xl rounded-2xl md:rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-8 md:border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight"
-                                onClick={() => window.open(checkoutUrl, '_blank')}
+                                onClick={() => window.open('https://pay.hub.la/M1w9Tsjvc5zJadbwasPZ', '_blank')}
                             >
                                 QUERO ACABAR COM <br className="lg:hidden" /> A TIMIDEZ AGORA
                             </Button>
