@@ -70,7 +70,7 @@ export function Pricing() {
                         <div className="space-y-8">
                             <Button
                                 size="lg"
-                                className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-8 md:py-10 text-[16px] md:text-2xl rounded-2xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_20px_40px_rgba(16,185,129,0.2)] border-b-8 border-emerald-800 active:border-b-0 uppercase tracking-tighter"
+                                className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-8 text-[16px] md:text-xl rounded-2xl md:rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-8 md:border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight"
                             >
                                 QUERO ACABAR COM <br className="lg:hidden" /> A TIMIDEZ AGORA
                             </Button>

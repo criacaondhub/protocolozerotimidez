@@ -142,7 +142,7 @@ export function Situations() {
                     <div className="w-full max-w-sm md:max-w-md">
                         <Button
                             size="lg"
-                            className="bg-emerald-600 hover:bg-emerald-500 text-white font-black py-6 text-[16px] rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight w-full shadow-emerald-900/20"
+                            className="bg-emerald-600 hover:bg-emerald-500 text-white font-black py-6 md:py-8 text-[16px] md:text-xl rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight w-full shadow-emerald-900/20"
                             onClick={() => document.getElementById('preco')?.scrollIntoView({ behavior: 'smooth' })}
                         >
                             QUERO SUPERAR MINHA TIMIDEZ
