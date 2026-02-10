@@ -37,15 +37,32 @@
     function _getUtmParams() {
       var a = "", r = window.top.location.href, e = new URL(r);
       if (null !== e) {
-        var t = e.searchParams.get("utm_source"), n = e.searchParams.get("utm_medium"), m = e.searchParams.get("utm_campaign"), o = e.searchParams.get("utm_term"), s = e.searchParams.get("utm_content");
-        -1 !== r.indexOf("?") && (a = "&sck=" + t + "|" + n + "|" + m + "|" + o + "|" + s, console.log("[hubla][utms]", a))
+        var t = e.searchParams.get("utm_source") || "";
+        var n = e.searchParams.get("utm_medium") || "";
+        var m = e.searchParams.get("utm_campaign") || "";
+        var o = e.searchParams.get("utm_term") || "";
+        var s = e.searchParams.get("utm_content") || "";
+        if (t || n || m || o || s) {
+          a = "&sck=" + t + "|" + n + "|" + m + "|" + o + "|" + s;
+        }
       } return a
-    }!function () {
+    }
+    function _applyUtmToLinks() {
       var a = new URLSearchParams(window.location.search);
-      a.toString() && document.querySelectorAll("a").forEach((function (r) {
-        for (var e = 0; e < _prefixDomains.length; e++)-1 !== r.href.indexOf(_prefixDomains[e]) && (-1 === r.href.indexOf("?") ? r.href += "?" + a.toString() + _getUtmParams() : r.href += "&" + a.toString() + _getUtmParams())
-      }))
-    }();
+      if (!a.toString()) return;
+      document.querySelectorAll("a").forEach(function (r) {
+        for (var e = 0; e < _prefixDomains.length; e++) {
+          if (r.href.indexOf(_prefixDomains[e]) !== -1 && r.href.indexOf("utm_source") === -1) {
+            var utms = _getUtmParams();
+            r.href += (r.href.indexOf("?") === -1 ? "?" : "&") + a.toString() + utms;
+          }
+        }
+      });
+    }
+
+    // Executa ao carregar e observa mudanças no DOM (para componentes Lazy)
+    _applyUtmToLinks();
+    new MutationObserver(_applyUtmToLinks).observe(document.body, { childList: true, subtree: true });
   </script>
   <!-- END UTM HUBLA -->
 </body>
