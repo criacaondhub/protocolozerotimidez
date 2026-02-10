@@ -40,10 +40,19 @@ export function Transformation() {
 
                     <div className="space-y-6 text-lg text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0">
                         <p>
-                            Você não nasceu tímido, você <strong>aprendeu</strong> a ser tímido. E o mesmo cérebro que criou essas travas, é o cérebro que pode ser treinado para eliminá-las.
+                            Eu era um <strong>nerd antissocial</strong>, preferindo o <strong>Game Boy</strong> à interação no recreio. Não por gostar da solidão, mas por <strong>não saber me relacionar</strong>. Eu era bom em análise e observação, mas péssimo em comunicação e expressão.
                         </p>
                         <p>
-                            Eu era o nerd que não conseguia olhar nos olhos de ninguém. Hoje, eu ensino gigantes. O que mudou? Eu entendi que falar bem não é dom, é um <strong>protocolo</strong>.
+                            Jogando <strong>The Sims</strong> em casa, eu entendia o comportamento humano, mas travava <strong>fora do jogo</strong>. Eu sofria bullying e era o <strong>melhor aluno e o mais sozinho da sala.</strong>
+                        </p>
+                        <p>
+                            Tudo mudou em 2010, quando entrei no <strong>teatro da escola</strong>. Fui forçado a encarar o que evitava: olhar nos olhos, usar o corpo e <strong>falar em público</strong>. Foi desconfortável, mas transformador.
+                        </p>
+                        <p>
+                            Perdi o medo, me tornei mais extrovertido e fiz amigos. Aprender comunicação mudou minha vida <strong>da noite para o dia.</strong> Eu continuei nerd, mas aprendi a <strong>me comunicar.</strong>
+                        </p>
+                        <p>
+                            Entendi que <strong>comunicação, oratória, carisma e persuasão não são dons, são habilidades treináveis.</strong> Tudo o que conquistei depois nasceu dessa decisão.
                         </p>
                     </div>
 
