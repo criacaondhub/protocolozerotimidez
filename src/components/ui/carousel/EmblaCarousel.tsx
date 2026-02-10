@@ -76,7 +76,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current)
                     const opacity = Math.min(Math.max(tweenValue, 0.3), 1).toString()
                     const scale = Math.min(Math.max(tweenValue, 0.85), 1).toString()
-                    const blur = (4 * (1 - Math.min(Math.max(tweenValue, 0), 1))).toFixed(2)
+                    const blur = (8 * (1 - Math.min(Math.max(tweenValue, 0), 1))).toFixed(2)
                     const targetNode = tweenNodes.current[slideIndex]
                     if (targetNode) {
                         targetNode.style.opacity = opacity
