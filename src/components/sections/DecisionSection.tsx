@@ -1,9 +1,14 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { X, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Beams from "@/components/ui/Beams";
+import { useIsDesktop } from "@/hooks/useIsDesktop";
+
+const Beams = lazy(() => import("@/components/ui/Beams"));
 
 export function DecisionSection() {
+    const isDesktop = useIsDesktop();
+
     const leftPoints = [
         "Continuar tímido e travado;",
         "Perder oportunidades diariamente;",
@@ -22,20 +27,24 @@ export function DecisionSection() {
 
     return (
         <section className="bg-black text-white py-[80px] md:py-24 relative overflow-hidden">
-            {/* Background Animation - Hidden on mobile */}
-            <div className="absolute inset-0 z-0 opacity-50 hidden lg:block">
-                <Beams
-                    beamWidth={4.6}
-                    beamHeight={25}
-                    beamNumber={24}
-                    lightColor="#f9efaf"
-                    speed={4}
-                    noiseIntensity={0.65}
-                    scale={0.32}
-                    rotation={30}
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
-            </div>
+            {/* Beams Animation - Desktop only */}
+            {isDesktop && (
+                <div className="absolute inset-0 z-0 opacity-50">
+                    <Suspense fallback={null}>
+                        <Beams
+                            beamWidth={4.6}
+                            beamHeight={25}
+                            beamNumber={24}
+                            lightColor="#f9efaf"
+                            speed={4}
+                            noiseIntensity={0.65}
+                            scale={0.32}
+                            rotation={30}
+                        />
+                    </Suspense>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+                </div>
+            )}
 
             <div className="container mx-auto px-4 sm:px-6 relative z-10">
                 <div className="text-center mb-10">

@@ -24,8 +24,8 @@ export function Hero() {
                     <img
                         src="assets/banner-hero-mobile.webp"
                         alt="Giovanni Begossi"
-                        width="800"
-                        height="1000"
+                        width="412"
+                        height="468"
                         className="w-full h-auto object-cover"
                         fetchPriority="high"
                         decoding="async"
