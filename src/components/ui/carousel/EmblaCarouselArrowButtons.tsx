@@ -58,6 +58,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
         <button
             className="embla__button embla__button--prev"
             type="button"
+            aria-label="Botão anterior"
             {...restProps}
         >
             <svg viewBox="0 0 532 532">
@@ -78,6 +79,7 @@ export const NextButton: React.FC<PropType> = (props) => {
         <button
             className="embla__button embla__button--next"
             type="button"
+            aria-label="Próximo botão"
             {...restProps}
         >
             <svg viewBox="0 0 532 532">

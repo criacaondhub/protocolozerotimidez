@@ -36,6 +36,8 @@ export function Transformation() {
                             <img
                                 src="assets/giovanni-antes.webp"
                                 alt="Giovanni Antes"
+                                width="400"
+                                height="350"
                                 className="w-auto h-[350px] object-contain drop-shadow-[0_0_50px_rgba(249,239,175,0.1)]"
                                 loading="lazy"
                                 fetchPriority="low"

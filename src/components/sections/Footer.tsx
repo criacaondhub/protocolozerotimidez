@@ -1,6 +1,6 @@
 export function Footer() {
     return (
-        <footer className="bg-black text-zinc-500 py-12 border-t border-zinc-900">
+        <footer className="bg-black text-zinc-400 py-12 border-t border-zinc-900">
             <div className="container mx-auto px-6 text-center">
                 <p className="text-sm md:text-base tracking-widest uppercase">
                     DESENVOLVIDO POR: <br className="md:hidden" />

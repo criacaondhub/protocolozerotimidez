@@ -24,6 +24,8 @@ export function Hero() {
                     <img
                         src="assets/banner-hero-mobile.webp"
                         alt="Giovanni Begossi"
+                        width="800"
+                        height="1000"
                         className="w-full h-auto object-cover"
                         fetchPriority="high"
                         decoding="async"
@@ -42,6 +44,8 @@ export function Hero() {
                         <img
                             src="assets/logo-zerotimidez-mobile.webp"
                             alt="Logo Protocolo Zero Timidez"
+                            width="200"
+                            height="100"
                             className="w-full h-auto"
                             fetchPriority="high"
                             decoding="async"
@@ -192,6 +196,8 @@ export function Hero() {
                 <img
                     src="assets/banner-hero.webp"
                     alt="Giovanni Begossi"
+                    width="1000"
+                    height="1200"
                     className="h-full w-auto object-contain object-top select-none"
                     fetchPriority="high"
                     decoding="async"
