@@ -11,6 +11,7 @@ const Expert = lazy(() => import("./components/sections/Expert").then(m => ({ de
 const FAQ = lazy(() => import("./components/sections/FAQ").then(m => ({ default: m.FAQ })))
 const Footer = lazy(() => import("./components/sections/Footer").then(m => ({ default: m.Footer })))
 const Transformation = lazy(() => import("./components/sections/Transformation").then(m => ({ default: m.Transformation })))
+const Testimonials = lazy(() => import("./components/sections/Testimonials").then(m => ({ default: m.Testimonials })))
 const CurvedLoop = lazy(() => import("./components/ui/CurvedLoop"))
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <CostSection />
         <Transformation />
         <Modules />
+        <Testimonials />
         <Pricing />
         <div className="w-full text-[#F9EFAF] bg-black py-4 md:py-2 flex items-center h-[80px] md:h-auto">
           <CurvedLoop
