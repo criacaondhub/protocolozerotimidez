@@ -37,25 +37,50 @@ export function Modules() {
                     </motion.p>
                 </header>
 
-                <div className="max-w-5xl mx-auto px-4 md:px-16 lg:px-0">
-                    <EmblaCarousel
-                        slides={Array.from({ length: 8 }).map((_, idx) => (
-                            <div key={idx} className="w-full flex items-center justify-center">
-                                <picture>
-                                    <source media="(max-width: 768px)" srcSet={`assets/modulo-0${idx + 1}-mobile.webp`} />
-                                    <img
-                                        src={`assets/modulo-0${idx + 1}.webp`}
-                                        alt={`Módulo ${idx + 1}`}
-                                        className="h-[500px] w-auto object-contain"
-                                        loading="lazy"
-                                        fetchPriority="low"
-                                        decoding="async"
-                                    />
-                                </picture>
+                <div className="max-w-7xl mx-auto">
+                    {/* Desktop Layout: Side by side, no carousel */}
+                    <div className="hidden lg:flex flex-row justify-center gap-5 px-4">
+                        {Array.from({ length: 6 }).map((_, idx) => (
+                            <div key={idx} className="shrink-0">
+                                <img
+                                    src={`assets/modulo-0${idx + 1}.webp`}
+                                    alt={`Módulo ${idx + 1}`}
+                                    className="h-[500px] w-auto object-contain"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
                             </div>
                         ))}
-                        options={{ align: 'center', loop: true, duration: 20 }}
-                    />
+                    </div>
+
+                    {/* Mobile/Tablet Layout: Carousel with Disclaimer */}
+                    <div className="lg:hidden">
+                        <div className="text-center mb-6 px-4">
+                            <p className="text-zinc-500 text-sm font-medium">
+                                Passe para o lado e confira o conteúdo que te fará perder a timidez de uma vez por todas.
+                            </p>
+                        </div>
+                        <div className="px-4 md:px-16">
+                            <EmblaCarousel
+                                slides={Array.from({ length: 6 }).map((_, idx) => (
+                                    <div key={idx} className="w-full flex items-center justify-center">
+                                        <picture>
+                                            <source media="(max-width: 768px)" srcSet={`assets/modulo-0${idx + 1}-mobile.webp`} />
+                                            <img
+                                                src={`assets/modulo-0${idx + 1}.webp`}
+                                                alt={`Módulo ${idx + 1}`}
+                                                className="h-[500px] w-auto object-contain"
+                                                loading="lazy"
+                                                fetchPriority="low"
+                                                decoding="async"
+                                            />
+                                        </picture>
+                                    </div>
+                                ))}
+                                options={{ align: 'center', loop: true, duration: 20 }}
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
 

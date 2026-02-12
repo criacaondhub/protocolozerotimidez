@@ -4,7 +4,7 @@ const testimonials = [
     {
         image: "assets/rafael-barcelos.webp",
         name: "Rafael Barcelos",
-        role: "Administração",
+        role: "Administrador",
         quote: "Eu queria melhorar minha comunicação, melhorar meu networking, perder minha timidez e ganhar mais confiança ao me expressar. Logo no início, percebi transformações de forma quase imediata, pois fiz duas apresentações em público do início ao fim sem gaguejar e até mesmo tremer, recebendo inclusive o convite para me tornar cerimonialista."
     },
     {
