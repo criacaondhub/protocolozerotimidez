@@ -10,11 +10,11 @@ export function DecisionSection() {
     const isDesktop = useIsDesktop();
 
     const leftPoints = [
-        "Continuar tímido e travado;",
-        "Perder oportunidades diariamente;",
-        <>Ver outras pessoas crescendo <br className="lg:hidden" /> enquanto você fica pra trás;</>,
-        <>Viver com o arrependimento de <br className="lg:hidden" /> "enquanto eu deveria ter falado";</>,
-        "Ficar preso na própria cabeça."
+        "Permanecer tímido e travado;",
+        "Perdendo oportunidades diariamente;",
+        "Vendo outras pessoas crescendo enquanto você fica pra trás;",
+        "Se arrependendo de não ter falado;",
+        "Seguindo preso na própria cabeça."
     ];
 
     const rightPoints = [
@@ -66,10 +66,10 @@ export function DecisionSection() {
                         </h2>
 
                         <div className="flex flex-col items-center flex-grow mb-12">
-                            <ul className="space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
+                            <ul className="space-y-6 flex flex-col items-start text-left">
                                 {leftPoints.map((point, idx) => (
-                                    <li key={idx} className="flex flex-col lg:flex-row items-center lg:items-start gap-3 lg:gap-4">
-                                        <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center shrink-0">
+                                    <li key={idx} className="flex flex-row items-start gap-4">
+                                        <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center shrink-0 mt-1">
                                             <X className="w-4 h-4 text-red-500" strokeWidth={3} />
                                         </div>
                                         <span className="text-lg md:text-xl text-zinc-300 leading-tight">
@@ -101,10 +101,10 @@ export function DecisionSection() {
                         </h2>
 
                         <div className="flex flex-col items-center flex-grow mb-12">
-                            <ul className="space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
+                            <ul className="space-y-6 flex flex-col items-start text-left">
                                 {rightPoints.map((point, idx) => (
-                                    <li key={idx} className="flex flex-col lg:flex-row items-center lg:items-start gap-3 lg:gap-4">
-                                        <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0">
+                                    <li key={idx} className="flex flex-row items-start gap-4">
+                                        <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
                                             <Check className="w-4 h-4 text-emerald-500" strokeWidth={3} />
                                         </div>
                                         <span className="text-lg md:text-xl text-emerald-50/90 leading-tight">
@@ -120,7 +120,7 @@ export function DecisionSection() {
                                 <strong>Investimento:</strong> R$ 97,00
                             </h3>
                             <h3 className="text-lg md:text-xl font-medium">
-                                <strong>Retorno:</strong> Todas as oportunidades que você vai <br className="lg:hidden" /> parar de perder
+                                <strong>Retorno:</strong> Todas as oportunidades que você vai parar de perder
                             </h3>
                         </div>
                     </motion.div>

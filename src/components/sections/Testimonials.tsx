@@ -11,7 +11,7 @@ const testimonials = [
         image: "assets/ana-paula.webp",
         name: "Ana Paula Trespach",
         role: "Inspetora Polícia Civil",
-        quote: "Eu sempre tive problema de me expressar por conta da timidez! Após o curso comecei a me comunicar muito melhor, perdi muitas vergonhas que eu tinha mesmo sendo tímida. O investimento valeu muito a pena porque o El Professor entrega muito a mais do que ele promete."
+        quote: "Eu sempre tive problema de me expressar por conta da timidez! Após o curso comecei a me comunicar melhor, me livrando da vergonha e timidez que eu tinha. O investimento valeu muito a pena porque o El Professor entrega muito a mais do que ele promete."
     },
     {
         image: "assets/rosenai-batista.webp",

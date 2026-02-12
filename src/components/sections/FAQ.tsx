@@ -10,7 +10,7 @@ export function FAQ() {
     const faqs = [
         {
             question: "Isso funciona para quem é MUITO tímido?",
-            answer: "Sim. O protocolo foi criado exatamente para quem é muito tímido ou ainda sofre com algum bloqueio e quer destravar 100% da comunicação. Giovanni era extremamente tímido, sofria bullying e não tinha amigos. Se funcionou para ele, funciona para você."
+            answer: "Sim. O protocolo foi criado exatamente para quem é muito tímido ou ainda sofre com algum bloqueio e quer destravar 100% da comunicação. Giovanni era extremamente tímido, sofria bullying e não tinha amigos. E não funcionou pra ele, funcionou para 70 Mil pessoas e vai funcionar para você!"
         },
         {
             question: "Quanto tempo leva para ver o resultado?",
@@ -18,7 +18,7 @@ export function FAQ() {
         },
         {
             question: "Mas e se eu não quiser falar em público?",
-            answer: "O protocolo funciona para qualquer situação: reuniões pequenas, conversas 1 a 1, vídeos, áudios... você não precisa virar palestrante, más precisa parar de travar."
+            answer: "O protocolo funciona para qualquer situação: reuniões pequenas, conversas 1 a 1, vídeos, áudios... você não precisa virar palestrante, mas precisa parar de travar."
         },
         {
             question: "E se eu não tiver tempo para fazer o curso?",
@@ -42,7 +42,7 @@ export function FAQ() {
         },
         {
             question: "Qual o contato do suporte?",
-            answer: "Entre em contato através do número (xx) xxxxx-xxxx."
+            answer: "Nosso suporte atende diretamente no WhatsApp no número +55 11 96494-2986 ou via e-mail suporte@elprofessordaoratoria.com.br"
         },
         {
             question: "Por quanto tempo terei acesso?",

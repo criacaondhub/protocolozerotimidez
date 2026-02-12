@@ -43,8 +43,8 @@ const situations = [
         icon: <Mic className="w-7 h-7" />,
         items: [
             { icon: "icone-fala.webp", text: "Você grava, escuta, deleta." },
-            { icon: "icone-repeat.webp", text: <>Grava de novo, escuta de novo, <br className="hidden lg:block" /> deleta de novo.</> },
-            { icon: "icone-calado.webp", text: "Até que desista e mande só o texto." },
+            { icon: "icone-repeat.webp", text: "Grava de novo, escuta de novo, deleta de novo." },
+            { icon: "icone-calado.webp", text: "Até que desiste e manda só um texto." },
         ]
     }
 ];
@@ -229,10 +229,10 @@ function SituationCard({ title, icon, items }: SituationCardProps) {
                     }}
                 />
 
-                <div className="flex flex-col gap-6 relative z-10 items-center lg:items-start text-center lg:text-left">
+                <div className="flex flex-col gap-6 relative z-10 items-start text-left">
                     {items.map((item, idx) => (
-                        <div key={idx} className="flex flex-col lg:flex-row items-center lg:items-start gap-3 lg:gap-4 py-1">
-                            <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                        <div key={idx} className="flex flex-row items-start gap-4 py-1">
+                            <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center mt-[2px]">
                                 <picture>
                                     <source media="(max-width: 768px)" srcSet={`assets/${item.icon.replace('.webp', '-mobile.webp')}`} />
                                     <img
@@ -244,7 +244,7 @@ function SituationCard({ title, icon, items }: SituationCardProps) {
                                     />
                                 </picture>
                             </div>
-                            <div className="text-[16px] leading-[1.5] text-white/90 font-medium text-center lg:text-left">
+                            <div className="text-[16px] leading-[1.5] text-white/90 font-medium text-left">
                                 {item.text}
                             </div>
                         </div>
