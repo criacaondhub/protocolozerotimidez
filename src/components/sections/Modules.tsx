@@ -43,9 +43,9 @@ export function Modules() {
                         {Array.from({ length: 6 }).map((_, idx) => (
                             <div key={idx} className="shrink-0">
                                 <img
-                                    src={`assets/modulo-0${idx + 1}.webp`}
+                                    src={`assets/modulo-0${idx + 1}.webp?v=2`}
                                     alt={`Módulo ${idx + 1}`}
-                                    className="h-[500px] w-auto object-contain"
+                                    className="h-[400px] w-auto object-contain"
                                     loading="lazy"
                                     decoding="async"
                                 />
@@ -65,9 +65,9 @@ export function Modules() {
                                 slides={Array.from({ length: 6 }).map((_, idx) => (
                                     <div key={idx} className="w-full flex items-center justify-center">
                                         <picture>
-                                            <source media="(max-width: 768px)" srcSet={`assets/modulo-0${idx + 1}-mobile.webp`} />
+                                            <source media="(max-width: 768px)" srcSet={`assets/modulo-0${idx + 1}-mobile.webp?v=2`} />
                                             <img
-                                                src={`assets/modulo-0${idx + 1}.webp`}
+                                                src={`assets/modulo-0${idx + 1}.webp?v=2`}
                                                 alt={`Módulo ${idx + 1}`}
                                                 className="h-[500px] w-auto object-contain"
                                                 loading="lazy"
