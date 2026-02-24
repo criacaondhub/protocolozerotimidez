@@ -22,7 +22,7 @@ export function Hero() {
                 {/* Mobile Banner Image */}
                 <div className="relative w-full">
                     <img
-                        src="assets/banner-hero-mobile.webp"
+                        src="assets/banner-hero-mobile.webp?v=2"
                         alt="Giovanni Begossi"
                         width="412"
                         height="468"
@@ -38,15 +38,15 @@ export function Hero() {
                 </div>
 
                 {/* Content overlapping the gradient */}
-                <div className="flex flex-col items-center px-4 -mt-16 relative z-20">
+                <div className="flex flex-col items-center px-4 -mt-[94px] relative z-20">
                     {/* Logo */}
-                    <div className="w-44 mb-6">
+                    <div className="mb-6 h-[60px]">
                         <img
                             src="assets/logo-zerotimidez-mobile.webp"
                             alt="Logo Protocolo Zero Timidez"
                             width="200"
-                            height="100"
-                            className="w-full h-auto"
+                            height="60"
+                            className="h-full w-auto"
                             fetchPriority="high"
                             decoding="async"
                             onError={(e) => {
@@ -74,7 +74,7 @@ export function Hero() {
                     </h1>
 
                     {/* Subtitle */}
-                    <p className="text-base leading-relaxed opacity-90 text-white text-center mb-6 max-w-[32ch] mx-auto">
+                    <p className="text-base leading-[1.1] opacity-90 text-white text-center mb-6 max-w-[32ch] mx-auto">
                         Você pode achar que timidez é "só seu jeito de ser". Mas a cada vez que você fica calado, não puxa conversa ou não se posiciona, você perde uma oportunidade que não volta&nbsp;mais.
                     </p>
 
