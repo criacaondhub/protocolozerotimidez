@@ -14,6 +14,8 @@ const Transformation = lazy(() => import("./components/sections/Transformation")
 const Testimonials = lazy(() => import("./components/sections/Testimonials").then(m => ({ default: m.Testimonials })))
 const CurvedLoop = lazy(() => import("./components/ui/CurvedLoop"))
 
+import { WhatsAppFloating } from "./components/ui/WhatsAppFloating"
+
 function App() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-[#ffdd80]/30 selection:text-[#ffdd80]">
@@ -39,6 +41,7 @@ function App() {
         <FAQ />
         <Footer />
       </Suspense>
+      <WhatsAppFloating />
     </main>
   )
 }
