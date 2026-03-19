@@ -6,7 +6,23 @@ import { useIsDesktop } from "@/hooks/useIsDesktop";
 
 const Beams = lazy(() => import("@/components/ui/Beams"));
 
-export function Pricing() {
+interface PricingProps {
+    discountAmount?: string;
+    oldPrice?: string;
+    installmentInteger?: string;
+    installmentDecimal?: string;
+    cashPrice?: string;
+    checkoutUrl?: string;
+}
+
+export function Pricing({
+    discountAmount = "200,00",
+    oldPrice = "297,00",
+    installmentInteger = "10",
+    installmentDecimal = ",18",
+    cashPrice = "97,00",
+    checkoutUrl = "https://pay.hub.la/M1w9Tsjvc5zJadbwasPZ"
+}: PricingProps) {
     const isDesktop = useIsDesktop();
 
     return (
@@ -48,13 +64,13 @@ export function Pricing() {
                     >
                         <h2 className="text-[20px] md:text-[1.8rem] font-bold mb-8 uppercase tracking-tight leading-tight">
                             Faça sua inscrição com <br className="lg:hidden" />
-                            <span className="text-[#f9efaf]">R$ 200,00 de desconto</span>
+                            <span className="text-[#f9efaf]">R$ {discountAmount} de desconto</span>
                         </h2>
 
                         {/* Old Price */}
                         <div className="mb-6">
                             <span className="text-zinc-500 text-2xl font-bold line-through decoration-red-600 decoration-[3px]">
-                                DE R$ 297,00
+                                DE R$ {oldPrice}
                             </span>
                         </div>
 
@@ -65,13 +81,13 @@ export function Pricing() {
 
                         <div className="flex items-end justify-center gap-1 mb-6">
                             <span className="text-3xl md:text-6xl font-bold text-[#f9efaf] pb-3 md:pb-5">R$</span>
-                            <span className="text-[7rem] md:text-[13rem] font-bold text-[#f9efaf] leading-[0.85] tracking-tighter">10</span>
-                            <span className="text-3xl md:text-6xl font-bold text-[#f9efaf] pb-3 md:pb-5">,18</span>
+                            <span className="text-[7rem] md:text-[13rem] font-bold text-[#f9efaf] leading-[0.85] tracking-tighter">{installmentInteger}</span>
+                            <span className="text-3xl md:text-6xl font-bold text-[#f9efaf] pb-3 md:pb-5">{installmentDecimal}</span>
                         </div>
 
                         {/* Cash Price */}
                         <div className="mb-10">
-                            <span className="text-zinc-400 text-[16px] italic font-medium">ou à vista por apenas R$ 97,00</span>
+                            <span className="text-zinc-400 text-[16px] italic font-medium">ou à vista por apenas R$ {cashPrice}</span>
                         </div>
 
                         {/* CTA Button */}
@@ -81,7 +97,7 @@ export function Pricing() {
                                 className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-8 text-[16px] md:text-xl rounded-2xl md:rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-8 md:border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight"
                                 asChild
                             >
-                                <a href="https://pay.hub.la/M1w9Tsjvc5zJadbwasPZ" target="_blank" rel="noopener noreferrer">
+                                <a href={checkoutUrl} target="_blank" rel="noopener noreferrer">
                                     QUERO ACABAR COM <br className="lg:hidden" /> A TIMIDEZ AGORA
                                 </a>
                             </Button>

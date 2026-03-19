@@ -1,5 +1,7 @@
 import { Suspense, lazy } from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Hero } from "./components/sections/Hero"
+import { WhatsAppFloating } from "./components/ui/WhatsAppFloating"
 
 // Lazy loading components below the fold
 const Situations = lazy(() => import("./components/sections/Situations").then(m => ({ default: m.Situations })))
@@ -14,9 +16,18 @@ const Transformation = lazy(() => import("./components/sections/Transformation")
 const Testimonials = lazy(() => import("./components/sections/Testimonials").then(m => ({ default: m.Testimonials })))
 const CurvedLoop = lazy(() => import("./components/ui/CurvedLoop"))
 
-import { WhatsAppFloating } from "./components/ui/WhatsAppFloating"
+interface LandingPageProps {
+  pricingProps?: {
+    discountAmount: string;
+    oldPrice: string;
+    installmentInteger: string;
+    installmentDecimal: string;
+    cashPrice: string;
+    checkoutUrl: string;
+  }
+}
 
-function App() {
+function LandingPage({ pricingProps }: LandingPageProps) {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-[#ffdd80]/30 selection:text-[#ffdd80]">
       <Hero />
@@ -26,7 +37,7 @@ function App() {
         <Transformation />
         <Modules />
         <Testimonials />
-        <Pricing />
+        <Pricing {...pricingProps} />
         <div className="w-full text-[#F9EFAF] bg-black py-4 md:py-2 flex items-center h-[80px] md:h-auto">
           <CurvedLoop
             marqueeText="Zero Timidez ✦ Zero Timidez ✦ Zero Timidez ✦ Zero Timidez ✦ Zero Timidez ✦ "
@@ -43,6 +54,28 @@ function App() {
       </Suspense>
       <WhatsAppFloating />
     </main>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter basename="/protocolo-zero-timidez">
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/v2" element={
+          <LandingPage
+            pricingProps={{
+              discountAmount: "150,00",
+              oldPrice: "297,00",
+              installmentInteger: "15",
+              installmentDecimal: ",42",
+              cashPrice: "147,00",
+              checkoutUrl: "https://pay.hub.la/dkVhp8NMIkW1KLXq34lz"
+            }}
+          />
+        } />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
