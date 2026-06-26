@@ -19,9 +19,9 @@ export function Pricing({
     discountAmount = "200,00",
     oldPrice = "297,00",
     installmentInteger = "10",
-    installmentDecimal = ",18",
+    installmentDecimal = ",03",
     cashPrice = "97,00",
-    checkoutUrl = "https://pay.hub.la/M1w9Tsjvc5zJadbwasPZ"
+    checkoutUrl = "https://lastlink.com/p/C151204D7/checkout-payment"
 }: PricingProps) {
     const isDesktop = useIsDesktop();
 
@@ -97,7 +97,7 @@ export function Pricing({
                                 className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-8 text-[16px] md:text-xl rounded-2xl md:rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(16,185,129,0.2)] border-b-8 md:border-b-4 border-emerald-800 active:border-b-0 uppercase tracking-tight"
                                 asChild
                             >
-                                <a href={checkoutUrl} target="_blank" rel="noopener noreferrer">
+                                <a id="btn_checkout" href={checkoutUrl} target="_blank" rel="noopener noreferrer">
                                     QUERO ACABAR COM <br className="lg:hidden" /> A TIMIDEZ AGORA
                                 </a>
                             </Button>

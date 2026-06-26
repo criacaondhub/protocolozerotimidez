@@ -41,6 +41,229 @@
   <!-- Preload hero image for mobile LCP -->
   <link rel="preload" as="image" href="assets/banner-hero-mobile.webp" media="(max-width: 1023px)">
 
+  <!-- UTM LASTLINK -->
+  <script>
+    (function () {
+      // =========================
+      // CONFIGURAÇÃO
+      // =========================
+      const CHECKOUT_BUTTON_ID = "btn_checkout";
+      const STORAGE_KEY = "lastlink_utm_params";
+
+      // =========================
+      // CAPTURA DOS PARÂMETROS
+      // =========================
+      const qs = new URLSearchParams(window.location.search);
+      const ref = (document.referrer || "").toLowerCase();
+
+      const getParam = (key) => {
+        const value = qs.get(key);
+        return value === null ? null : value.trim();
+      };
+
+      const isValid = (value) => {
+        return value !== null &&
+               value !== "" &&
+               value !== "null" &&
+               value !== "undefined";
+      };
+
+      const setIfMissing = (obj, key, value) => {
+        if (!isValid(obj[key]) && isValid(value)) {
+          obj[key] = value;
+        }
+      };
+
+      // =========================
+      // ORIGEM AUTOMÁTICA CASO NÃO TENHA UTM_SOURCE
+      // =========================
+      const refToSource = () => {
+        if (ref.includes("facebook.com") || ref.includes("instagram.com")) return "meta";
+        if (ref.includes("google.")) return "google";
+        if (ref.includes("youtube.com")) return "youtube";
+        if (ref.includes("tiktok.com")) return "tiktok";
+        if (ref.includes("whatsapp.com") || ref.includes("wa.me")) return "whatsapp";
+        if (ref.includes("manychat.com")) return "manychat";
+        if (ref.includes("linkedin.com")) return "linkedin";
+        return "direct";
+      };
+
+      // =========================
+      // PARÂMETROS QUE SERÃO ENVIADOS PARA A LASTLINK
+      // =========================
+      const params = {
+        utm_source: getParam("utm_source"),
+        utm_medium: getParam("utm_medium"),
+        utm_campaign: getParam("utm_campaign"),
+        utm_content: getParam("utm_content"),
+        utm_term: getParam("utm_term"),
+
+        // Parâmetros extras úteis
+        src: getParam("src"),
+        sck: getParam("sck"),
+        vtid: getParam("vtid"),
+
+        fbclid: getParam("fbclid"),
+        gclid: getParam("gclid"),
+        campaign_id: getParam("campaign_id"),
+        adset_id: getParam("adset_id"),
+        ad_id: getParam("ad_id"),
+        placement: getParam("placement"),
+        site_source_name: getParam("site_source_name")
+      };
+
+      // Se vier ?source=stories, ?source=bio etc.
+      const sourceParam = getParam("source");
+
+      if (isValid(sourceParam)) {
+        setIfMissing(params, "utm_source", sourceParam.toLowerCase());
+      }
+
+      // Se não tiver utm_source, tenta identificar pela origem
+      setIfMissing(params, "utm_source", refToSource());
+
+      // Define utm_medium automaticamente se não vier na URL
+      const isMeta =
+        ref.includes("facebook.com") ||
+        ref.includes("instagram.com") ||
+        isValid(getParam("fbclid")) ||
+        ["meta", "facebook", "instagram"].includes((params.utm_source || "").toLowerCase());
+
+      if (!isValid(params.utm_medium)) {
+        if (isMeta) {
+          params.utm_medium = "paid_social";
+        } else if (params.utm_source === "google") {
+          params.utm_medium = isValid(getParam("gclid")) ? "cpc" : "organic";
+        } else if (params.utm_source === "direct") {
+          params.utm_medium = "none";
+        } else {
+          params.utm_medium = "referral";
+        }
+      }
+
+      // =========================
+      // RECUPERA UTMS SALVAS NA SESSÃO
+      // =========================
+      const storedParams = (() => {
+        try {
+          const stored = sessionStorage.getItem(STORAGE_KEY);
+          return stored ? JSON.parse(stored) : {};
+        } catch {
+          return {};
+        }
+      })();
+
+      const finalParams = {
+        ...storedParams,
+        ...params
+      };
+
+      // Remove parâmetros vazios
+      Object.keys(finalParams).forEach((key) => {
+        if (!isValid(finalParams[key])) {
+          delete finalParams[key];
+        }
+      });
+
+      // Salva para manter UTMs durante a navegação
+      try {
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(finalParams));
+      } catch {}
+
+      // =========================
+      // ADICIONA PARÂMETROS NA URL DO CHECKOUT
+      // =========================
+      const appendParamsToUrl = (url, paramsObj) => {
+        try {
+          const newUrl = new URL(url, window.location.origin);
+
+          Object.entries(paramsObj).forEach(([key, value]) => {
+            if (isValid(value)) {
+              newUrl.searchParams.set(key, value);
+            }
+          });
+
+          return newUrl.toString();
+        } catch {
+          return url;
+        }
+      };
+
+      const applyUtmToCheckoutButton = () => {
+        const buttons = document.querySelectorAll("#" + CHECKOUT_BUTTON_ID);
+
+        buttons.forEach((button) => {
+          if (!button) return;
+
+          // Caso seja link normal <a href="">
+          if (button.tagName.toLowerCase() === "a" && button.href) {
+            button.href = appendParamsToUrl(button.href, finalParams);
+            button.setAttribute("data-lastlink-utm-applied", "true");
+            return;
+          }
+
+          // Caso tenha href, mesmo não sendo <a>
+          const href = button.getAttribute("href");
+          if (href) {
+            button.setAttribute("href", appendParamsToUrl(href, finalParams));
+            button.setAttribute("data-lastlink-utm-applied", "true");
+            return;
+          }
+
+          // Caso o botão use data-url
+          const dataUrl = button.getAttribute("data-url");
+          if (dataUrl) {
+            button.setAttribute("data-url", appendParamsToUrl(dataUrl, finalParams));
+            button.setAttribute("data-lastlink-utm-applied", "true");
+            return;
+          }
+
+          // Caso o botão use onclick com link
+          const onclick = button.getAttribute("onclick");
+          if (onclick) {
+            const match = onclick.match(/https?:\/\/[^'"\s]+/);
+
+            if (match && match[0]) {
+              const newUrl = appendParamsToUrl(match[0], finalParams);
+              button.setAttribute("onclick", onclick.replace(match[0], newUrl));
+              button.setAttribute("data-lastlink-utm-applied", "true");
+            }
+          }
+        });
+      };
+
+      // =========================
+      // INICIALIZAÇÃO
+      // =========================
+      const start = () => {
+        applyUtmToCheckoutButton();
+
+        // Reaplica caso o botão seja carregado depois pelo builder
+        const observer = new MutationObserver(() => {
+          applyUtmToCheckoutButton();
+        });
+
+        observer.observe(document.documentElement, {
+          childList: true,
+          subtree: true,
+          attributes: true,
+          attributeFilter: ["href", "data-url", "onclick"]
+        });
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", start);
+      } else {
+        start();
+      }
+
+      try {
+        console.log("UTMs enviadas para Lastlink:", finalParams);
+      } catch {}
+    })();
+  </script>
+  <!-- END UTM LASTLINK -->
+
 </head>
 
 <body>
@@ -51,41 +274,6 @@
 
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
-
-  <!-- UTM HUBLA -->
-  <script>
-    var _prefixDomains = ["https://pay.hub.la", "https://invoice.hub.la", "https://app.hub.la", "https://hub.la"];
-    function _getUtmParams() {
-      var a = "", r = window.top.location.href, e = new URL(r);
-      if (null !== e) {
-        var t = e.searchParams.get("utm_source") || "";
-        var n = e.searchParams.get("utm_medium") || "";
-        var m = e.searchParams.get("utm_campaign") || "";
-        var o = e.searchParams.get("utm_term") || "";
-        var s = e.searchParams.get("utm_content") || "";
-        if (t || n || m || o || s) {
-          a = "&sck=" + t + "|" + n + "|" + m + "|" + o + "|" + s;
-        }
-      } return a
-    }
-    function _applyUtmToLinks() {
-      var a = new URLSearchParams(window.location.search);
-      if (!a.toString()) return;
-      document.querySelectorAll("a").forEach(function (r) {
-        for (var e = 0; e < _prefixDomains.length; e++) {
-          if (r.href.indexOf(_prefixDomains[e]) !== -1 && r.href.indexOf("utm_source") === -1) {
-            var utms = _getUtmParams();
-            r.href += (r.href.indexOf("?") === -1 ? "?" : "&") + a.toString() + utms;
-          }
-        }
-      });
-    }
-
-    // Executa ao carregar e observa mudanças no DOM (para componentes Lazy)
-    _applyUtmToLinks();
-    new MutationObserver(_applyUtmToLinks).observe(document.body, { childList: true, subtree: true });
-  </script>
-  <!-- END UTM HUBLA -->
 </body>
 
 </html>

@@ -68,9 +68,9 @@ function App() {
               discountAmount: "150,00",
               oldPrice: "297,00",
               installmentInteger: "15",
-              installmentDecimal: ",42",
+              installmentDecimal: ",20",
               cashPrice: "147,00",
-              checkoutUrl: "https://pay.hub.la/dkVhp8NMIkW1KLXq34lz"
+              checkoutUrl: "https://lastlink.com/p/C1C738362/checkout-payment"
             }}
           />
         } />
