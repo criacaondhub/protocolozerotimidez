@@ -195,6 +195,9 @@
         buttons.forEach((button) => {
           if (!button) return;
 
+          // Evita reprocessar (impede loop infinito do MutationObserver ao reescrever o href)
+          if (button.getAttribute("data-lastlink-utm-applied") === "true") return;
+
           // Caso seja link normal <a href="">
           if (button.tagName.toLowerCase() === "a" && button.href) {
             button.href = appendParamsToUrl(button.href, finalParams);
