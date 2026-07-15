@@ -42,7 +42,7 @@ export function FAQ() {
         },
         {
             question: "Qual o contato do suporte?",
-            answer: "Nosso suporte atende diretamente no WhatsApp no número +55 11 93623-4882 ou via e-mail suporte@elprofessordaoratoria.com.br"
+            answer: "Nosso suporte atende diretamente no WhatsApp no número +55 11 93623-7310 ou via e-mail suporte@elprofessordaoratoria.com.br"
         },
         {
             question: "Por quanto tempo terei acesso?",
