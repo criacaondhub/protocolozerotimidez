@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 export const WhatsAppFloating = () => {
-    const whatsappUrl = "https://api.whatsapp.com/send/?phone=55119362348882&text=Olá%21+Vim+da+página+do+Protocolo+Zero+Timidez+e+gostaria+de+saber+mais.&type=phone_number&app_absent=0";
+    const whatsappUrl = "https://api.whatsapp.com/send/?phone=5511936234882&text=Olá%21+Vim+da+página+do+Protocolo+Zero+Timidez+e+gostaria+de+saber+mais.&type=phone_number&app_absent=0";
 
     return (
         <motion.a
